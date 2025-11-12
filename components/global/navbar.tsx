@@ -1,103 +1,3 @@
-// "use client"
-
-// import Link from "next/link"
-// import { Button } from "@/components/ui/button"
-// import { Menu, X } from "lucide-react"
-// import { useState } from "react"
-
-// export function Navbar() {
-//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-//   return (
-//     <>
-//       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/5">
-//         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-//           <div className="flex items-center justify-between h-20">
-//             {/* Logo */}
-//             <Link href="/" className="group">
-//               <span className="text-xl font-medium text-white tracking-tight transition-opacity group-hover:opacity-70">
-//                 ABU ZAYN
-//               </span>
-//             </Link>
-
-//             {/* Desktop Navigation */}
-//             <div className="hidden md:flex items-center gap-12">
-//               <Link
-//                 href="#menu"
-//                 className="text-sm text-white/70 hover:text-white transition-colors tracking-wide uppercase"
-//               >
-//                 Menu
-//               </Link>
-//               <Link
-//                 href="#about"
-//                 className="text-sm text-white/70 hover:text-white transition-colors tracking-wide uppercase"
-//               >
-//                 About
-//               </Link>
-//               <Link
-//                 href="#contact"
-//                 className="text-sm text-white/70 hover:text-white transition-colors tracking-wide uppercase"
-//               >
-//                 Contact
-//               </Link>
-//               <Button
-//                 size="sm"
-//                 className="bg-white text-black hover:bg-white/90 font-medium text-xs uppercase tracking-widest px-6 h-10 transition-all"
-//               >
-//                 Order
-//               </Button>
-//             </div>
-
-//             {/* Mobile Menu Button */}
-//             <button
-//               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-//               className="md:hidden p-2 text-white transition-opacity hover:opacity-70"
-//               aria-label="Toggle menu"
-//             >
-//               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-//             </button>
-//           </div>
-//         </div>
-//       </nav>
-
-//       {mobileMenuOpen && (
-//         <div className="md:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-xl">
-//           <div className="flex flex-col items-center justify-center h-full gap-8">
-//             <Link
-//               href="#menu"
-//               onClick={() => setMobileMenuOpen(false)}
-//               className="text-2xl text-white/80 hover:text-white transition-colors tracking-wide uppercase"
-//             >
-//               Menu
-//             </Link>
-//             <Link
-//               href="#about"
-//               onClick={() => setMobileMenuOpen(false)}
-//               className="text-2xl text-white/80 hover:text-white transition-colors tracking-wide uppercase"
-//             >
-//               About
-//             </Link>
-//             <Link
-//               href="#contact"
-//               onClick={() => setMobileMenuOpen(false)}
-//               className="text-2xl text-white/80 hover:text-white transition-colors tracking-wide uppercase"
-//             >
-//               Contact
-//             </Link>
-//             <Button
-//               size="lg"
-//               className="bg-white text-black hover:bg-white/90 font-medium text-sm uppercase tracking-widest px-10 mt-4"
-//               onClick={() => setMobileMenuOpen(false)}
-//             >
-//               Order Now
-//             </Button>
-//           </div>
-//         </div>
-//       )}
-//     </>
-//   )
-// }
-
 "use client"
 
 import Link from "next/link"
@@ -110,40 +10,39 @@ export function Navbar() {
 
   return (
     <>
-      {/* Desktop & Mobile Navbar */}
-      <nav className="fixed left-0 right-0 top-0 z-50 border-b border-border/5 bg-background/20 backdrop-blur-md">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="flex h-20 items-center justify-between">
+      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="group">
-              <span className="text-xl font-medium tracking-tight text-foreground transition-opacity group-hover:opacity-70">
+              <span className="text-xl font-medium text-white tracking-tight transition-opacity group-hover:opacity-70">
                 ABU ZAYN
               </span>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden items-center gap-12 md:flex">
+            <div className="hidden md:flex items-center gap-12">
               <Link
                 href="#menu"
-                className="text-sm uppercase tracking-wide text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm text-white/70 hover:text-white transition-colors tracking-wide uppercase"
               >
                 Menu
               </Link>
               <Link
                 href="#about"
-                className="text-sm uppercase tracking-wide text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm text-white/70 hover:text-white transition-colors tracking-wide uppercase"
               >
                 About
               </Link>
               <Link
                 href="#contact"
-                className="text-sm uppercase tracking-wide text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm text-white/70 hover:text-white transition-colors tracking-wide uppercase"
               >
                 Contact
               </Link>
               <Button
                 size="sm"
-                className="h-10 px-6 text-xs font-medium uppercase tracking-widest transition-all"
+                className="bg-white text-black hover:bg-white/90 font-medium text-xs uppercase tracking-widest px-6 h-10 transition-all"
               >
                 Order
               </Button>
@@ -152,7 +51,7 @@ export function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-foreground transition-opacity hover:opacity-70 md:hidden"
+              className="md:hidden p-2 text-white transition-opacity hover:opacity-70"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -161,37 +60,36 @@ export function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl md:hidden">
-          <div className="flex h-full flex-col items-center justify-center gap-8">
+        <div className="md:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-xl">
+          <div className="flex flex-col items-center justify-center h-full gap-8">
             <Link
               href="#menu"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-2xl uppercase tracking-wide text-muted-foreground transition-colors hover:text-foreground"
+              className="text-2xl text-white/80 hover:text-white transition-colors tracking-wide uppercase"
             >
               Menu
             </Link>
             <Link
               href="#about"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-2xl uppercase tracking-wide text-muted-foreground transition-colors hover:text-foreground"
+              className="text-2xl text-white/80 hover:text-white transition-colors tracking-wide uppercase"
             >
               About
             </Link>
             <Link
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-2xl uppercase tracking-wide text-muted-foreground transition-colors hover:text-foreground"
+              className="text-2xl text-white/80 hover:text-white transition-colors tracking-wide uppercase"
             >
               Contact
             </Link>
             <Button
               size="lg"
-              className="mt-4 px-10 text-sm font-medium uppercase tracking-widest"
+              className="bg-white text-black hover:bg-white/90 font-medium text-sm uppercase tracking-widest px-10 mt-4"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Order Now
+              Order
             </Button>
           </div>
         </div>
