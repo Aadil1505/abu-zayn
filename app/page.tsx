@@ -3,6 +3,7 @@ import { DirectionsButtons } from "@/components/global/directions";
 import { FeaturedMenu } from "@/components/global/featured";
 import { Gallery } from "@/components/global/gallery";
 import { Hero } from "@/components/global/hero";
+import { Location } from "@/components/global/location";
 import { Navbar } from "@/components/global/navbar";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       {/* <FeaturedMenu /> */}
       <Gallery/>
       <DirectionsButtons/>
+      <Location/>
     </main>
   )
 }
