@@ -5,12 +5,12 @@ import Image from "next/image"
 
 export function Hero() {
     return (
-        <section className="relative h-screen w-full overflow-hidden bg-black">
+        <section className="relative h-screen w-full overflow-hidden bg-background">
             <div className="absolute inset-0 z-0">
                 <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-100">
                     <source src="cooking.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute inset-0 bg-black/30" />
+                <div className="absolute inset-0 bg-background/30" />
             </div>
 
             <div className="relative z-10 h-full flex items-center justify-center px-6">
@@ -30,17 +30,17 @@ export function Hero() {
                     </div>
 
                     <div className="flex justify-center">
-                        <div className="w-16 h-px bg-background" />
+                        <div className="w-16 h-px bg-foreground" />
                     </div>
 
-                    <p className="text-xs sm:text-sm md:text-base text-secondary font-semibold uppercase">
+                    <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-semibold uppercase">
                         Classic Egyptian Excellence
                     </p>
 
                     <div className="pt-4">
                         <Button
                             size="lg"
-                            className="bg-white text-black hover:bg-white/90 font-medium text-xs uppercase tracking-[0.2em] px-12 h-12 transition-all hover:scale-105"
+                            className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium text-xs uppercase tracking-[0.2em] px-12 h-12 transition-all hover:scale-105"
                         >
                             Order Now
                         </Button>
@@ -49,8 +49,8 @@ export function Hero() {
             </div>
 
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-                <div className="w-px h-12 bg-background" />
-                <div className="w-1.5 h-1.5 rounded-full bg-background" />
+                <div className="w-px h-12 bg-foreground" />
+                <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
             </div>
         </section>
     )
