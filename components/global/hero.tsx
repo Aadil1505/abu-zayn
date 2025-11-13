@@ -33,7 +33,7 @@ export function Hero() {
                         <div className="w-16 h-px bg-foreground" />
                     </div>
 
-                    <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-semibold uppercase">
+                    <p className="text-xs sm:text-sm md:text-base text-foreground font-semibold uppercase">
                         Classic Egyptian Excellence
                     </p>
 

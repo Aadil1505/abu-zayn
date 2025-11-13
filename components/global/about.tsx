@@ -5,7 +5,7 @@ export default function AboutSection() {
         <section id='about' className="relative py-12 sm:py-16 md:py-24 lg:py-32 overflow-hidden">
             {/* Simple linear Background */}
             <div className="absolute inset-0 bg-linear-to-b from-background via-orange-50/20 to-background dark:via-orange-950/10" />
-            
+
             <div className="relative mx-auto max-w-5xl space-y-8 px-4 sm:px-6 md:space-y-12 lg:space-y-16">
                 {/* Simple Header with Orange Accent */}
                 <div className="text-center">
@@ -16,19 +16,19 @@ export default function AboutSection() {
                         </span>
                         <div className="h-px w-8 bg-orange-500" />
                     </div>
-                    <h2 className="text-3xl font-semibold sm:text-4xl lg:text-5xl">
-                        About Abu Zayn
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-widest text-foreground mb-6">
+                        ABOUT US
                     </h2>
                 </div>
-                
+
                 <div className="grid gap-6 sm:grid-cols-2 sm:gap-8 md:gap-12 lg:gap-16 items-center">
                     {/* Image Container */}
                     <div className="relative order-1 group">
-                        <div className="relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden border border-orange-500/20">
-                            <img 
-                                src="food-gif.gif" 
-                                className="w-full h-full object-cover" 
-                                alt="Abu Zayn restaurant interior in Rockville Centre" 
+                        <div className="relative aspect-4/3 rounded-xl sm:rounded-2xl overflow-hidden border border-orange-500/20">
+                            <img
+                                src="food-gif.gif"
+                                className="w-full h-full object-cover"
+                                alt="Abu Zayn restaurant interior in Rockville Centre"
                             />
                         </div>
                     </div>
@@ -62,12 +62,12 @@ export default function AboutSection() {
                                     <p className="text-xs text-orange-600 dark:text-orange-400 font-medium">
                                         ⭐⭐⭐⭐⭐ Google Reviews
                                     </p>
-                                    <img 
-                                        className="h-8 sm:h-10 w-auto mt-2" 
-                                        src="/abu-zayn-transparent.png" 
-                                        alt="Abu Zayn Restaurant Logo" 
-                                        height="40" 
-                                        width="auto" 
+                                    <img
+                                        className="h-8 sm:h-10 w-auto mt-2"
+                                        src="/abu-zayn-transparent.png"
+                                        alt="Abu Zayn Restaurant Logo"
+                                        height="40"
+                                        width="auto"
                                     />
                                 </div>
                             </blockquote>
