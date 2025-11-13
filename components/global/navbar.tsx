@@ -24,19 +24,19 @@ export function Navbar() {
             <div className="hidden md:flex items-center gap-12">
               <Link
                 href="#menu"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
+                className="text-sm hover:text-secondary transition-colors tracking-wide uppercase"
               >
                 Menu
               </Link>
               <Link
                 href="#about"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
+                className="text-sm hover:text-secondary transition-colors tracking-wide uppercase"
               >
                 About
               </Link>
               <Link
                 href="#contact"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
+                className="text-sm hover:text-secondary transition-colors tracking-wide uppercase"
               >
                 Contact
               </Link>

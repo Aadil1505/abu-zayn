@@ -1,4 +1,7 @@
 import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import { ChefHat } from 'lucide-react'
+import { ShinyButton } from '../ui/shiny-button'
 
 export default function AboutSection() {
     return (
@@ -48,29 +51,19 @@ export default function AboutSection() {
                             </p>
                         </div>
 
-                        {/* Testimonial */}
+                        {/* View Menu Button */}
                         <div className="pt-4 sm:pt-6">
-                            <blockquote className="border-l-4 border-orange-500 pl-4 sm:pl-5 space-y-4">
-                                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed italic">
-                                    Abu Zayn is hands down one of the BEST local dining experiences I've ever had! We went for lunch, and from the moment our group walked in, the owner, Omar, welcomed us like family.
-                                </p>
-
-                                <div className="mt-4 sm:mt-6 space-y-2 sm:space-y-3">
-                                    <cite className="block font-medium text-foreground text-sm sm:text-base not-italic">
-                                        Wesam
-                                    </cite>
-                                    <p className="text-xs text-orange-600 dark:text-orange-400 font-medium">
-                                        ⭐⭐⭐⭐⭐ Google Reviews
-                                    </p>
-                                    <img
-                                        className="h-8 sm:h-10 w-auto mt-2"
-                                        src="/abu-zayn-transparent.png"
-                                        alt="Abu Zayn Restaurant Logo"
-                                        height="40"
-                                        width="auto"
-                                    />
-                                </div>
-                            </blockquote>
+                            {/* <Button 
+                                asChild
+                                size="lg"
+                                className="bg-orange-500 hover:bg-orange-600 text-white"
+                            >
+                                <a href="#menu">
+                                    <ChefHat className="mr-2 h-5 w-5" />
+                                    View Our Menu
+                                </a>
+                            </Button> */}
+                            <ShinyButton>View Our Menu</ShinyButton>
                         </div>
                     </div>
                 </div>
