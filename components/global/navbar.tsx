@@ -15,9 +15,12 @@ export function Navbar() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="group">
-              <span className="text-xl font-medium text-foreground tracking-tight transition-opacity group-hover:opacity-70">
+              {/* <span className="text-xl font-medium text-foreground tracking-tight transition-opacity group-hover:opacity-70">
                 ABU ZAYN
-              </span>
+              </span> */}
+              <div className="bg-white rounded-full">
+                <img src={"z-logo.png"} className="size-16"/>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
