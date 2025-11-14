@@ -259,6 +259,14 @@ export default function MenuPage() {
       
 
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-6 sm:py-8">
+        <div className="text-center mb-8">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-widest text-foreground mb-6">
+            MENU
+          </h2>
+          <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed font-light">
+            An overview of our delicious dishes
+          </p>
+        </div>
         <Tabs defaultValue="sandwiches" className="w-full">
           <TabsList className="sticky top-20 z-40 w-full justify-start overflow-x-auto mb-6 h-auto flex-nowrap gap-3 sm:gap-6 bg-background/95 backdrop-blur-sm border-b border-border rounded-none py-3 px-1">
             <TabsTrigger 
