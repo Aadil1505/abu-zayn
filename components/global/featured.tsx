@@ -54,9 +54,9 @@ export function FeaturedMenu() {
               key={index}
               className="group active:opacity-70 transition-opacity"
             >
-              <div className="relative aspect-[16/11] sm:aspect-[4/3] overflow-hidden bg-muted mb-4 sm:mb-6 rounded-sm">
+              <div className="relative aspect-16/11 sm:aspect-4/3 overflow-hidden bg-muted mb-4 sm:mb-6 rounded-sm">
                 {/* Placeholder for dish image - replace with actual images */}
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-900/30 to-amber-800/30 flex items-center justify-center">
+                <div className="absolute inset-0 bg-linear-to-br from-amber-900/30 to-amber-800/30 flex items-center justify-center">
                   <span className="text-5xl sm:text-6xl opacity-20">🍽️</span>
                 </div>
                 {/* When you add images, uncomment this:

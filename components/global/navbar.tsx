@@ -19,7 +19,7 @@ export function Navbar() {
                 ABU ZAYN
               </span> */}
               <div className="bg-white rounded-full">
-                <img src={"z-logo.png"} className="size-16"/>
+                <img src={"z-logo.png"} className="size-12"/>
               </div>
             </Link>
 

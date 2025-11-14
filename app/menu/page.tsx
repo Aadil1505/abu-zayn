@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Badge } from '@/components/ui/badge'
 import { MenuCard } from '@/components/menu/menu-card'
 
 interface MenuItem {
@@ -11,179 +10,274 @@ interface MenuItem {
   price: string
   image: string
   tags?: string[]
+  outOfStock?: boolean
 }
 
 const menuData = {
-  appetizers: [
+  sandwiches: [
     {
-      name: 'Smoked Salmon Tartare',
-      description: 'Norwegian salmon, avocado mousse, crispy capers, citrus oil',
-      price: '$24',
-      image: '/elegant-smoked-salmon-tartare-fine-dining.jpg',
-      tags: ['GF'],
+      name: 'Lamb Kebab Pita',
+      description: 'Beef kabab in a Pita with your choice of toppings and sauces.',
+      price: '$12',
+      image: 'https://d1w7312wesee68.cloudfront.net/cJ38kabgB1zavPuif2kAJXRAuD7DvRfuKF54ZrMtEWo/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/3ff5df1d-aff4-497c-8d05-125ce120f3b7.jpg',
     },
     {
-      name: 'Burrata & Heirloom Tomatoes',
-      description: 'Creamy Italian burrata, heritage tomatoes, basil, aged balsamic',
-      price: '$22',
-      image: '/burrata-heirloom-tomatoes-fine-dining.jpg',
-      tags: ['V'],
+      name: 'Beef Shawarma Kaiser',
+      description: 'Beef shawarma, on brioche bun, w/baby arugula, pickles, onions, parsley, your choice of sauce.',
+      price: '$8.99',
+      image: 'https://d1w7312wesee68.cloudfront.net/cWmEflBecXbZvppaquIbnzBHBdKMm0VC39qyg147XOM/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/2ccd34f2-3a32-413e-afb9-91eb53cdc04b.jpg',
     },
     {
-      name: 'Beef Carpaccio',
-      description: 'Thinly sliced tenderloin, arugula, parmesan, truffle aioli',
-      price: '$26',
-      image: '/beef-carpaccio-fine-dining-plated.jpg',
+      name: 'Beef Shawarma Pita',
+      description: 'Beef shawarma, on pita, w/baby arugula, pickles, onions, parsley, your choice of sauce.',
+      price: '$13',
+      image: 'https://d1w7312wesee68.cloudfront.net/33mTzzOQQR11rUpf6BmDtWgI_7FP-zA0XaF8L_HaX8c/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/0d48934b-e1d8-4b6b-840f-15f258c7ecd7.jpg',
     },
     {
-      name: 'Wild Mushroom Soup',
-      description: 'Forest mushrooms, thyme, crème fraîche, truffle essence',
-      price: '$18',
-      image: '/wild-mushroom-soup-elegant-bowl.jpg',
-      tags: ['V', 'GF'],
+      name: 'Chicken Shawarma Kaiser',
+      description: 'Chicken shawarma, on brioche bun, w/baby arugula, pickles, onions, parsley, your choice of sauce.',
+      price: '$7.99',
+      image: 'https://d1w7312wesee68.cloudfront.net/6aruXylPfQ6JZ0Bh7vLWX3rVBo8oYbypm-65pDBL6Rs/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/dfb7f885-4142-472b-b627-dfe6c832ae77.jpg',
+    },
+    {
+      name: 'Chicken Shawarma Pita',
+      description: 'Chicken shawarma, on pita, w/baby arugula, pickles, onions, parsley, your choice of sauce.',
+      price: '$11',
+      image: 'https://d1w7312wesee68.cloudfront.net/XK5nQGMkWr7OF1I_2BdcPwd0E2pciG6lk-7wuvxQPQM/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/0f88ba83-0a07-4577-bda9-cfa8735f98c1.jpg',
+    },
+    {
+      name: 'Falafel Pita',
+      description: 'Falafel, on pita, w/baby arugula, pickles, onions, parsley, your choice of sauce.',
+      price: '$10',
+      image: 'https://d1w7312wesee68.cloudfront.net/dCEsjsNCaUdZOvRM2C1zMol6A_x38o0HpQHLqdSbm6s/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/7300d20d-953c-4cf5-aa0b-ad3f9b9103d3.jpg',
+    },
+    {
+      name: 'Fried Shrimp Pita',
+      description: 'Fried shrimp, on pita, w/baby arugula, pickles, onions, parsley, your choice of sauce.',
+      price: '$13',
+      image: 'https://d1w7312wesee68.cloudfront.net/KU96OceoeiRUxjV31G6b5VQ4owHHaHsFO40HYPn9nno/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/72362c7f-5408-4ebb-9a5e-9d1031d37f1b.jpg',
+    },
+    {
+      name: 'Kofta Sandwiches',
+      description: 'Kofta, on french baguette, w/baby arugula, pickles, onions, parsley, your choice of sauce.',
+      price: '$12',
+      image: 'https://d1w7312wesee68.cloudfront.net/EABwCUidMuwW93vCcHKcdttGXVtIYJ05yh1_DV_YtBM/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/b61e7f4f-6051-4cb0-996d-2aca9bd09b1b.jpg',
+    },
+    {
+      name: 'Shish Tawook Pita',
+      description: 'Chicken Kebab in a Pita Bread with Choice of Argula, Pickled Vegetable, Tomato, Onion & Parsley. Choice of Sauces',
+      price: '$12',
+      image: 'https://d1w7312wesee68.cloudfront.net/b2pNvAz0h9ULxYKDDvd3MAR92PRTyANCyORmbJDvEEw/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/eff7244f-ec27-4937-a2eb-a040cb292095.jpg',
+    },
+    {
+      name: 'Mix Shawarma Pita',
+      description: '',
+      price: '$14',
+      image: '/mixed-shawarma-pita-sandwich.jpg',
+    },
+    {
+      name: 'Mix Shawarma Kaiser',
+      description: '',
+      price: '$8.99',
+      image: '/mixed-shawarma-kaiser-bun.jpg',
     },
   ],
-  entrees: [
+  platters: [
     {
-      name: 'Pan-Seared Sea Bass',
-      description: 'Mediterranean sea bass, saffron risotto, grilled asparagus, lemon butter',
-      price: '$48',
-      image: '/pan-seared-sea-bass-fine-dining-plated.jpg',
-      tags: ['GF'],
+      name: 'Shish Tawook Platter',
+      description: 'Tender cubes of chicken, marinated in our house spices and skewered as classic kebabs, flame-grilled and finished with caramelized onions and a smoky grilled tomato.',
+      price: '$18',
+      image: 'https://d1w7312wesee68.cloudfront.net/CgKN1fr1Ohq3Yttx0oZigbBDcpedvO2NcwFYJvaESTQ/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/a45f522b-5956-462c-9e2a-95e7d2a63d46.jpg',
     },
     {
-      name: 'Wagyu Ribeye',
-      description: '12oz Japanese A5 wagyu, truffle mash, seasonal vegetables, red wine jus',
-      price: '$82',
-      image: '/wagyu-ribeye-steak-fine-dining.jpg',
+      name: 'Beef Kofta Platter',
+      description: 'Our own house-ground beef, seasoned with a one-of-a-kind spice mix, piled on rice and crowned with caramelized onions and a char-kissed tomato.',
+      price: '$19',
+      image: 'https://d1w7312wesee68.cloudfront.net/4lnuNPnF_xLbAE_-5C06slUejENmszmHu2AD9Mg1i5w/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/c4320961-cb71-47dd-857f-3622c060c909.jpg',
     },
     {
-      name: 'Duck Breast à l\'Orange',
-      description: 'Roasted duck breast, orange gastrique, root vegetables, crispy skin',
-      price: '$54',
-      image: '/duck-breast-orange-fine-dining.jpg',
-      tags: ['GF'],
+      name: 'Lamb Kebab Platter',
+      description: 'Skewered beef kabobs seared over open flame, piled on rice, and crowned with caramelized onions and a char-kissed tomato.',
+      price: '$20',
+      image: 'https://d1w7312wesee68.cloudfront.net/sb18j3OdFsvqsCU_FM5aiLlq_rC1rO97IDXQnqXKmJU/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/8be59589-2a51-424c-8aac-91383b75ceb5.jpg',
     },
     {
-      name: 'Wild Mushroom Risotto',
-      description: 'Carnaroli rice, porcini, chanterelles, parmesan, white truffle oil',
-      price: '$38',
-      image: '/mushroom-risotto-fine-dining-plated.jpg',
-      tags: ['V', 'GF'],
+      name: 'Lamb Chops Platter',
+      description: 'House-marinated New Zealand halal lamb with bold Egyptian spices, piled on rice and crowned with caramelized onions and a char-kissed tomato.',
+      price: '$28',
+      image: 'https://d1w7312wesee68.cloudfront.net/jV9ua6H7fxQ168uDNvOlzUkqNmPGoXFj2Y9aKbY3TK4/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/e1a1f077-4cb5-452d-ac86-99b07fb3957a.jpg',
     },
     {
-      name: 'Lamb Rack',
-      description: 'New Zealand lamb, herb crust, potato gratin, mint jus, seasonal greens',
-      price: '$62',
-      image: '/lamb-rack-fine-dining-plated.jpg',
+      name: 'Ribeye Steak Platter',
+      description: 'Comes w/ Choice rice or fries and a side of salad.',
+      price: '$30',
+      image: 'https://d1w7312wesee68.cloudfront.net/aDt6m67q7iGCIJbwiWl5rC9nx_yl-kK3iWxH58malw8/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/71b10781-0c4f-45be-89ff-baf80f349364.jpg',
+      outOfStock: true,
+    },
+    {
+      name: 'Rotisserie Chicken Platter',
+      description: 'Comes w/ Choice rice or fries and a side of salad.',
+      price: '$28',
+      image: 'https://d1w7312wesee68.cloudfront.net/LlcrT_gQYxRGil-NGAT5OnLOLJF1TxHA1qIyv1--Vqk/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/da717c09-dde2-4f2f-8735-daa187dc0ff5.jpg',
+      outOfStock: true,
+    },
+    {
+      name: 'Half Chicken Platter',
+      description: 'Egyptian-style half chicken marinated in bold spices, fire-roasted to juicy perfection, served with caramelized onions and a smoky grilled tomato',
+      price: '$18',
+      image: 'https://d1w7312wesee68.cloudfront.net/HNAQ18vJkFlXPWs1Jmek7jWkHDptLxEvxIdo2qHbgXU/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/a7ba7019-1138-42e3-b2f7-9dea6dbabad5.jpg',
+    },
+    {
+      name: 'Mix Grill Platter',
+      description: 'Build your perfect mixed grill—choose three sizzling skewers like beef kabob, chicken kofta, or chicken kebab—piled on rice and crowned with caramelized onions and a char-kissed tomato.',
+      price: '$30',
+      image: 'https://d1w7312wesee68.cloudfront.net/sgTf9r6kKfvcNM9JgbBAcHC2viinj-6NSFOzPgfDKIc/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/9d7293b8-a880-4cfa-a2cc-2f4a2e43e6ef.jpg',
+    },
+    {
+      name: 'Chicken Kofta Platter',
+      description: 'Spiced ground-chicken kofta skewers seared over open flame, piled on rice, and crowned with caramelized onions and a char-kissed tomato.',
+      price: '$19',
+      image: 'https://d1w7312wesee68.cloudfront.net/-FWsmQbWMOJz3eWYTOn_wvqY5pkZto4IUsL6wV9DTuU/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/8088932f-8882-4ee7-b890-78842186e5dd.jpg',
+    },
+  ],
+  bowls: [
+    {
+      name: 'Chicken Shawarma Bowl',
+      description: 'Tender sliced chicken shawarma served with fresh tomato, onions, and tangy pickled vegetables on top.',
+      price: '$17',
+      image: 'https://d1w7312wesee68.cloudfront.net/pxtNm-LxVXNx4j8jeFAUuvDmuJKXCXlvq6xxqzlZKrI/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/6ba8865e-eac0-49a2-9173-a05a6ca2a033.jpg',
+    },
+    {
+      name: 'Beef Shawarma Bowl',
+      description: 'Tender steak, marinated and shaved thin, layered over fragrant rice with juicy tomato, sweet onion, and our signature pickled veggies.',
+      price: '$18',
+      image: 'https://d1w7312wesee68.cloudfront.net/OHIbO7IX92f12WrhrXRog4I3T3XDgXFS93T36Qff5WM/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/5a4645ef-1ae1-434c-af85-934c98bb0104.jpg',
+    },
+    {
+      name: 'Mix Shawarma Bowl',
+      description: 'Marinated steak & chicken shawarma, thinly sliced over rice with pickled vegetables, tomato, and onion.',
+      price: '$20',
+      image: 'https://d1w7312wesee68.cloudfront.net/bv2gTUKdAvBOXYou8U2IAWGfYbZkmx8xBMJOVYYQTRw/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/f113d400-625a-41f2-b28b-b252d809905b.jpg',
     },
   ],
   sides: [
     {
-      name: 'Truffle Mac & Cheese',
-      description: 'Three cheese blend, black truffle, crispy panko topping',
-      price: '$14',
-      image: '/truffle-mac-cheese-gourmet.jpg',
-      tags: ['V'],
+      name: 'Egyptian Salad',
+      description: 'A cool, crunchy medley of tomato, cucumber, and onion—our take on the classic Egyptian salata baladi—finished with fresh herbs, olive oil, and a tangy lemon splash.',
+      price: '$7 / $12',
+      image: 'https://d1w7312wesee68.cloudfront.net/byBDVBQd34mm8WueY18zjDvwPKmCQ0MvXfLIJgAasT0/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/6f5dbb3b-0cfe-45f1-bc69-8da505c15a83.jpg',
     },
     {
-      name: 'Grilled Asparagus',
-      description: 'Jumbo asparagus spears, lemon zest, parmesan',
-      price: '$12',
-      image: '/grilled-asparagus-fine-dining.jpg',
-      tags: ['V', 'GF'],
+      name: 'Babaghanoush',
+      description: 'Smoky roasted eggplant blended with tahini, garlic, and lemon, drizzled with olive oil. Served with warm pita for dipping.',
+      price: '$8 / $14',
+      image: 'https://d1w7312wesee68.cloudfront.net/CXCLJWvIwD9jyaqnofLTRC_qNulwR5zwvO7vcqKo6jM/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/9a4a72d6-a0d2-4488-bee9-21d24a6302b8.jpg',
     },
     {
-      name: 'Roasted Brussels Sprouts',
-      description: 'Caramelized sprouts, bacon lardons, balsamic glaze',
-      price: '$13',
-      image: '/roasted-brussels-sprouts-gourmet.jpg',
-      tags: ['GF'],
+      name: 'Hummus',
+      description: 'Rustic Egyptian hummus—hand-mashed chickpeas with tahini, garlic, and lemon—creamy yet delightfully chunky, drizzled with olive oil and served with warm pita.',
+      price: '$8 / $15',
+      image: 'https://d1w7312wesee68.cloudfront.net/VeeNzbfaSgDMKUzkBSpqgnzRtyAhnTnCKPW-t6V2-3I/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/7527c00b-d171-45bf-90c9-f8fc021596c6.jpg',
     },
     {
-      name: 'Truffle Fries',
-      description: 'Hand-cut fries, white truffle oil, parmesan, herbs',
-      price: '$11',
-      image: '/truffle-fries-gourmet.jpg',
-      tags: ['V'],
+      name: 'Fries',
+      description: 'Crispy golden fries tossed in aromatic truffle oil and finished with a generous sprinkle of grated cheese.',
+      price: '$5 / $8',
+      image: 'https://d1w7312wesee68.cloudfront.net/kMaiKtS7mKS5pO76v3DF19kzqUJkz3E93hIui438BRs/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/dd139399-2588-4e5f-89a8-02baa1de4324.jpg',
+    },
+    {
+      name: 'Rice',
+      description: 'Fluffy basmati rice tossed with a touch of our house seasoning—simple, fresh, and the perfect partner to any shawarma or grill.',
+      price: '$5 / $10',
+      image: '/basmati-rice-side-dish.jpg',
+    },
+    {
+      name: 'Picked Vegetables',
+      description: '',
+      price: '$4',
+      image: '/pickled-vegetables-middle-eastern.jpg',
+    },
+    {
+      name: 'Pita Chips',
+      description: '',
+      price: '$3.50',
+      image: '/crispy-pita-chips.jpg',
+    },
+    {
+      name: 'Moussaka',
+      description: 'Roasted eggplant baked in a spiced tomato sauce with onions, garlic, and fragrant herbs for a classic Egyptian moussaka.',
+      price: '$8 / $14',
+      image: '/egyptian-moussaka-eggplant.jpg',
     },
   ],
   desserts: [
     {
-      name: 'Chocolate Fondant',
-      description: 'Dark chocolate lava cake, vanilla bean ice cream, berry compote',
-      price: '$16',
-      image: '/chocolate-fondant-lava-cake-fine-dining.jpg',
-      tags: ['V'],
+      name: 'Om Ali',
+      description: '',
+      price: '$3.50',
+      image: '/om-ali-egyptian-dessert.jpg',
     },
     {
-      name: 'Lemon Tart',
-      description: 'Classic French tart, Italian meringue, raspberry coulis',
-      price: '$14',
-      image: '/lemon-tart-fine-dining-plated.jpg',
-      tags: ['V'],
+      name: 'Rice Pudding',
+      description: '',
+      price: '$3.50',
+      image: 'https://d1w7312wesee68.cloudfront.net/WhzsnpTU5agax8n5JqL28_5yxAH4IpzORjZJ8MgmcBI/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/7d70e938-a1e7-45a0-9a9c-39f2ba6bf9ce.jpg',
     },
     {
-      name: 'Crème Brûlée',
-      description: 'Madagascar vanilla custard, caramelized sugar, shortbread',
-      price: '$15',
-      image: '/placeholder.svg?height=300&width=400',
-      tags: ['V', 'GF'],
+      name: 'Egyptian Basbousa',
+      description: '',
+      price: '$3.50',
+      image: '/basbousa-semolina-cake.jpg',
     },
     {
-      name: 'Tiramisu',
-      description: 'Classic Italian dessert, espresso-soaked ladyfingers, mascarpone',
-      price: '$14',
-      image: '/placeholder.svg?height=300&width=400',
-      tags: ['V'],
+      name: 'Blueberry Cream Cheese Basbousa',
+      description: '',
+      price: '$3.50',
+      image: '/blueberry-cream-cheese-basbousa.jpg',
     },
   ],
   beverages: [
     {
-      name: 'House Wine Selection',
-      description: 'Red, white, or rosé — curated by our sommelier',
-      price: '$12-18',
-      image: '/placeholder.svg?height=300&width=400',
+      name: 'Soda Can',
+      description: '',
+      price: '$2',
+      image: '/soda-can.png',
     },
     {
-      name: 'Craft Cocktails',
-      description: 'Signature cocktails using premium spirits and fresh ingredients',
-      price: '$16-22',
-      image: '/placeholder.svg?height=300&width=400',
-    },
-    {
-      name: 'Artisan Coffee',
-      description: 'Espresso, cappuccino, latte — single-origin beans',
-      price: '$5-8',
-      image: '/placeholder.svg?height=300&width=400',
-    },
-    {
-      name: 'Premium Tea Selection',
-      description: 'Curated loose-leaf teas from around the world',
-      price: '$6-9',
-      image: '/placeholder.svg?height=300&width=400',
+      name: 'Soda Bottle',
+      description: '',
+      price: '$3',
+      image: '/soda-bottle.png',
     },
   ],
 }
 
 export default function MenuPage() {
   return (
-    <main className="bg-background pt-20">
+    <main className="min-h-screen bg-background pt-20">
+
+      
 
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-6 sm:py-8">
-        <Tabs defaultValue="appetizers" className="w-full">
-          <TabsList className="sticky top-20 z-40 w-full justify-start overflow-x-auto mb-6 h-auto flex-nowrap gap-3 sm:gap-6 bg-background/95 backdrop-blur-sm border-b border-border rounded-none pb-3 px-1">
+        <Tabs defaultValue="sandwiches" className="w-full">
+          <TabsList className="sticky top-20 z-40 w-full justify-start overflow-x-auto mb-6 h-auto flex-nowrap gap-3 sm:gap-6 bg-background/95 backdrop-blur-sm border-b border-border rounded-none py-3 px-1">
             <TabsTrigger 
-              value="appetizers"
+              value="sandwiches"
               className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-none bg-transparent border-b-2 border-transparent data-[state=active]:border-primary transition-colors px-3 sm:px-4 py-2 hover:text-foreground whitespace-nowrap"
             >
-              Appetizers
+              Sandwiches
             </TabsTrigger>
             <TabsTrigger 
-              value="entrees"
+              value="platters"
               className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-none bg-transparent border-b-2 border-transparent data-[state=active]:border-primary transition-colors px-3 sm:px-4 py-2 hover:text-foreground whitespace-nowrap"
             >
-              Entrées
+              Platters
+            </TabsTrigger>
+            <TabsTrigger 
+              value="bowls"
+              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-none bg-transparent border-b-2 border-transparent data-[state=active]:border-primary transition-colors px-3 sm:px-4 py-2 hover:text-foreground whitespace-nowrap"
+            >
+              Bowls
             </TabsTrigger>
             <TabsTrigger 
               value="sides"
@@ -205,17 +299,25 @@ export default function MenuPage() {
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="appetizers" className="mt-0">
+          <TabsContent value="sandwiches" className="mt-0">
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
-              {menuData.appetizers.map((item, index) => (
+              {menuData.sandwiches.map((item, index) => (
                 <MenuCard key={index} item={item} />
               ))}
             </div>
           </TabsContent>
 
-          <TabsContent value="entrees" className="mt-0">
+          <TabsContent value="platters" className="mt-0">
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
-              {menuData.entrees.map((item, index) => (
+              {menuData.platters.map((item, index) => (
+                <MenuCard key={index} item={item} />
+              ))}
+            </div>
+          </TabsContent>
+
+          <TabsContent value="bowls" className="mt-0">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
+              {menuData.bowls.map((item, index) => (
                 <MenuCard key={index} item={item} />
               ))}
             </div>
@@ -247,10 +349,6 @@ export default function MenuPage() {
         </Tabs>
 
         <div className="mt-12 text-center border-t border-border pt-8">
-          <div className="flex flex-wrap justify-center gap-4 mb-4">
-            <Badge variant="outline" className="text-xs uppercase tracking-wider border-primary/30 text-primary">V — Vegetarian</Badge>
-            <Badge variant="outline" className="text-xs uppercase tracking-wider border-primary/30 text-primary">GF — Gluten Free</Badge>
-          </div>
           <p className="text-xs text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
             Please inform your server of any dietary restrictions or allergies.
           </p>

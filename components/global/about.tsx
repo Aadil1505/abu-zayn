@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
-import { ChefHat } from 'lucide-react'
 import { ShinyButton } from '../ui/shiny-button'
 
 export default function AboutSection() {

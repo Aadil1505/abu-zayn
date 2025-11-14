@@ -7,6 +7,7 @@ interface MenuItem {
   price: string
   image: string
   tags?: string[]
+  outOfStock?: boolean
 }
 
 interface MenuCardProps {
@@ -18,10 +19,17 @@ export function MenuCard({ item }: MenuCardProps) {
     <Card className="group overflow-hidden bg-card border-border/50 hover:border-primary/50 transition-all duration-500">
       <div className="relative aspect-square overflow-hidden bg-muted/30">
         <img
-          src={item.image || "/placeholder.svg"}
+          src={item.image || "abu-zayn-transparent.png"}
           alt={item.name}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
         />
+        {item.outOfStock && (
+          <div className="absolute inset-0 bg-background/80 flex items-center justify-center">
+            <Badge variant="secondary" className="text-xs uppercase tracking-wider">
+              Out of Stock
+            </Badge>
+          </div>
+        )}
       </div>
       
       <div className="p-3 sm:p-4">
@@ -34,9 +42,11 @@ export function MenuCard({ item }: MenuCardProps) {
           </span>
         </div>
         
-        <p className="text-xs text-muted-foreground leading-relaxed mb-3 text-pretty line-clamp-2">
-          {item.description}
-        </p>
+        {item.description && (
+          <p className="text-xs text-muted-foreground leading-relaxed mb-3 text-pretty line-clamp-2">
+            {item.description}
+          </p>
+        )}
         
         {item.tags && item.tags.length > 0 && (
           <div className="flex gap-1 flex-wrap">
