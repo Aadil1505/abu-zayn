@@ -69,18 +69,6 @@ const menuData = {
       price: '$12',
       image: 'https://d1w7312wesee68.cloudfront.net/b2pNvAz0h9ULxYKDDvd3MAR92PRTyANCyORmbJDvEEw/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/eff7244f-ec27-4937-a2eb-a040cb292095.jpg',
     },
-    {
-      name: 'Mix Shawarma Pita',
-      description: '',
-      price: '$14',
-      image: '/mixed-shawarma-pita-sandwich.jpg',
-    },
-    {
-      name: 'Mix Shawarma Kaiser',
-      description: '',
-      price: '$8.99',
-      image: '/mixed-shawarma-kaiser-bun.jpg',
-    },
   ],
   platters: [
     {
@@ -185,79 +173,22 @@ const menuData = {
       price: '$5 / $8',
       image: 'https://d1w7312wesee68.cloudfront.net/kMaiKtS7mKS5pO76v3DF19kzqUJkz3E93hIui438BRs/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/dd139399-2588-4e5f-89a8-02baa1de4324.jpg',
     },
-    {
-      name: 'Rice',
-      description: 'Fluffy basmati rice tossed with a touch of our house seasoning—simple, fresh, and the perfect partner to any shawarma or grill.',
-      price: '$5 / $10',
-      image: '/basmati-rice-side-dish.jpg',
-    },
-    {
-      name: 'Picked Vegetables',
-      description: '',
-      price: '$4',
-      image: '/pickled-vegetables-middle-eastern.jpg',
-    },
-    {
-      name: 'Pita Chips',
-      description: '',
-      price: '$3.50',
-      image: '/crispy-pita-chips.jpg',
-    },
-    {
-      name: 'Moussaka',
-      description: 'Roasted eggplant baked in a spiced tomato sauce with onions, garlic, and fragrant herbs for a classic Egyptian moussaka.',
-      price: '$8 / $14',
-      image: '/egyptian-moussaka-eggplant.jpg',
-    },
   ],
   desserts: [
-    {
-      name: 'Om Ali',
-      description: '',
-      price: '$3.50',
-      image: '/om-ali-egyptian-dessert.jpg',
-    },
     {
       name: 'Rice Pudding',
       description: '',
       price: '$3.50',
       image: 'https://d1w7312wesee68.cloudfront.net/WhzsnpTU5agax8n5JqL28_5yxAH4IpzORjZJ8MgmcBI/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/7d70e938-a1e7-45a0-9a9c-39f2ba6bf9ce.jpg',
     },
-    {
-      name: 'Egyptian Basbousa',
-      description: '',
-      price: '$3.50',
-      image: '/basbousa-semolina-cake.jpg',
-    },
-    {
-      name: 'Blueberry Cream Cheese Basbousa',
-      description: '',
-      price: '$3.50',
-      image: '/blueberry-cream-cheese-basbousa.jpg',
-    },
   ],
   beverages: [
-    {
-      name: 'Soda Can',
-      description: '',
-      price: '$2',
-      image: '/soda-can.png',
-    },
-    {
-      name: 'Soda Bottle',
-      description: '',
-      price: '$3',
-      image: '/soda-bottle.png',
-    },
   ],
 }
 
 export default function MenuPage() {
   return (
     <main className="min-h-screen bg-background pt-20">
-
-      
-
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-6 sm:py-8">
         <div className="text-center mb-8">
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-widest text-foreground mb-6">
@@ -271,37 +202,37 @@ export default function MenuPage() {
           <TabsList className="w-full justify-center overflow-x-auto mb-8 h-auto flex-wrap sm:flex-nowrap gap-2 sm:gap-3 bg-muted/50 rounded-lg p-2">
             <TabsTrigger 
               value="sandwiches"
-              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
+              className="text-xs sm:text-sm font-light tracking-widest uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
             >
               Sandwiches
             </TabsTrigger>
             <TabsTrigger 
               value="platters"
-              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
+              className="text-xs sm:text-sm font-light tracking-widest uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
             >
               Platters
             </TabsTrigger>
             <TabsTrigger 
               value="bowls"
-              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
+              className="text-xs sm:text-sm font-light tracking-widest uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
             >
               Bowls
             </TabsTrigger>
             <TabsTrigger 
               value="sides"
-              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
+              className="text-xs sm:text-sm font-light tracking-widest uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
             >
               Sides
             </TabsTrigger>
             <TabsTrigger 
               value="desserts"
-              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
+              className="text-xs sm:text-sm font-light tracking-widest uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
             >
               Desserts
             </TabsTrigger>
             <TabsTrigger 
               value="beverages"
-              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
+              className="text-xs sm:text-sm font-light tracking-widest uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
             >
               Beverages
             </TabsTrigger>

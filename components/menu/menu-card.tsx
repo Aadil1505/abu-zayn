@@ -16,7 +16,7 @@ interface MenuCardProps {
 
 export function MenuCard({ item }: MenuCardProps) {
   return (
-    <Card className="group overflow-hidden bg-card border-border/50 hover:border-primary/50 transition-all duration-500">
+    <Card className="group overflow-hidden bg-card border-border/50 hover:border-primary/50 transition-all duration-500 flex flex-col">
       <div className="relative aspect-square overflow-hidden bg-muted/30">
         <img
           src={item.image || "abu-zayn-transparent.png"}
@@ -32,7 +32,7 @@ export function MenuCard({ item }: MenuCardProps) {
         )}
       </div>
       
-      <div className="p-3 sm:p-4">
+      <div className="p-3 sm:p-4 flex flex-col flex-1">
         <div className="flex items-start justify-between gap-2 mb-2">
           <h3 className="font-sans text-xs sm:text-sm font-light tracking-wide text-balance leading-tight uppercase">
             {item.name}
@@ -43,13 +43,13 @@ export function MenuCard({ item }: MenuCardProps) {
         </div>
         
         {item.description && (
-          <p className="text-xs text-muted-foreground leading-relaxed mb-3 text-pretty line-clamp-2">
+          <p className="text-xs text-muted-foreground leading-relaxed mb-3 text-pretty">
             {item.description}
           </p>
         )}
         
         {item.tags && item.tags.length > 0 && (
-          <div className="flex gap-1 flex-wrap">
+          <div className="flex gap-1 flex-wrap mt-auto">
             {item.tags.map((tag, tagIndex) => (
               <Badge 
                 key={tagIndex} 

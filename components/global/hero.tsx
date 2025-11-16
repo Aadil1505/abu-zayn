@@ -11,7 +11,7 @@ export function Hero() {
                 <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-100">
                     <source src="cooking-hero.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute inset-0 bg-background/50" />
+                <div className="absolute inset-0 bg-black/70" />
             </div>
 
             <div className="relative z-10 h-full flex items-center justify-center px-6">
