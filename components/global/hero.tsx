@@ -11,7 +11,7 @@ export function Hero() {
                 <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-100">
                     <source src="cooking-hero.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute inset-0 bg-background/80" />
+                <div className="absolute inset-0 bg-background/50" />
             </div>
 
             <div className="relative z-10 h-full flex items-center justify-center px-6">
@@ -42,10 +42,9 @@ export function Hero() {
                         <Button
                             size="lg"
                             // className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium text-xs uppercase tracking-[0.2em] px-12 h-12 transition-all hover:scale-105"
-                            className=""
                         >
                             <Link href={"https://www.toasttab.com/local/order/yoyo-chicken-merrick-rd-rockville-280-merrick-rd/"}>
-                                Order Now
+                                ORDER NOW
                             </Link>
                         </Button>
                     </div>

@@ -51,7 +51,7 @@ export function Navbar() {
               asChild
             >
               <Link href={"https://www.toasttab.com/local/order/yoyo-chicken-merrick-rd-rockville-280-merrick-rd"}>
-                Order Now
+                ORDER NOW
               </Link>
             </Button>
           </div>
@@ -69,7 +69,7 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent 
-              side="right" 
+              side="left" 
               className="w-[320px] sm:w-[360px] border-l border-border/40 bg-background/98 backdrop-blur-xl p-0 flex flex-col"
             >
               {/* <VisuallyHidden> */}
@@ -121,7 +121,7 @@ export function Navbar() {
                     asChild
                   >
                     <Link href={"https://www.toasttab.com/local/order/yoyo-chicken-merrick-rd-rockville-280-merrick-rd"}>
-                      Order Now
+                      ORDER NOW
                     </Link>
                   </Button>
                   <p className="text-xs text-center text-muted-foreground">

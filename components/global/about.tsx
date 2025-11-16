@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { ShinyButton } from '../ui/shiny-button'
 
 export default function AboutSection() {
@@ -10,11 +11,11 @@ export default function AboutSection() {
                 {/* Simple Header with Orange Accent */}
                 <div className="text-center">
                     <div className="inline-flex items-center gap-2 mb-3">
-                        <div className="h-px w-8 bg-orange-500" />
-                        <span className="text-orange-600 dark:text-orange-400 text-xs uppercase tracking-wider font-medium">
+                        <div className="h-px w-8 bg-primary" />
+                        <span className="text-primary text-xs uppercase tracking-wider font-medium">
                             Our Story
                         </span>
-                        <div className="h-px w-8 bg-orange-500" />
+                        <div className="h-px w-8 bg-primary" />
                     </div>
                     <h2 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-widest text-foreground mb-6">
                         ABOUT US
@@ -24,7 +25,7 @@ export default function AboutSection() {
                 <div className="grid gap-6 sm:grid-cols-2 sm:gap-8 md:gap-12 lg:gap-16 items-center">
                     {/* Image Container */}
                     <div className="relative order-1 group">
-                        <div className="relative aspect-4/3 rounded-xl sm:rounded-2xl overflow-hidden border border-orange-500/20">
+                        <div className="relative aspect-4/3 rounded-xl sm:rounded-2xl overflow-hidden border border-primary/20">
                             <img
                                 src="food-gif.gif"
                                 className="w-full h-full object-cover"
@@ -38,8 +39,8 @@ export default function AboutSection() {
                         <div className="space-y-3 sm:space-y-4">
                             <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                                 Located in the heart of Rockville Centre, Abu Zayn brings{' '}
-                                <span className="text-foreground font-semibold border-b-2 border-orange-500/50">
-                                    authentic Middle Eastern flavors
+                                <span className="text-foreground italic font-semibold border-b-2 border-primary">
+                                    Authentic Middle Eastern Flavors
                                 </span>{' '}
                                 to Long Island with a modern twist.
                             </p>
@@ -60,7 +61,12 @@ export default function AboutSection() {
                                     View Our Menu
                                 </a>
                             </Button> */}
-                            <ShinyButton>View Our Menu</ShinyButton>
+                            <Link href="/menu">
+                                <ShinyButton>
+                                    VIEW OUR MENU
+                                </ShinyButton>
+                            </Link>
+
                         </div>
                     </div>
                 </div>
