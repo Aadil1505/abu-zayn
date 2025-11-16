@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export const Location = () => {
   const hours = [
@@ -115,12 +116,13 @@ export const Location = () => {
           <div className="mt-12 text-center">
             <Button 
               size="lg" 
-              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_8px_32px_hsla(15,75%,55%,0.25)] hover:shadow-[0_8px_32px_hsla(15,75%,55%,0.4)] transition-all duration-300"
+              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_8px_32px_hsla(15,75%,55%,0.25)] hover:shadow-[0_8px_32px_hsla(15,75%,55%,0.4)] transition-all duration-300 font-semibold"
               asChild
             >
-              <a href="https://www.toasttab.com/local/order/yoyo-chicken-merrick-rd-rockville-280-merrick-rd/" target="_blank" rel="noopener noreferrer">
-                Order Pickup Now
-              </a>
+                <Link href="https://www.toasttab.com/local/order/yoyo-chicken-merrick-rd-rockville-280-merrick-rd/">
+                
+                    ORDER PICKUP NOW
+                </Link>
             </Button>
           </div>
         </div>

@@ -2,15 +2,16 @@
 
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Link from "next/link"
 
 export function Hero() {
     return (
         <section className="relative h-screen w-full overflow-hidden bg-background">
             <div className="absolute inset-0 z-0">
                 <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-100">
-                    <source src="cooking.mp4" type="video/mp4" />
+                    <source src="cooking-hero.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute inset-0 bg-background/30" />
+                <div className="absolute inset-0 bg-background/80" />
             </div>
 
             <div className="relative z-10 h-full flex items-center justify-center px-6">
@@ -40,9 +41,12 @@ export function Hero() {
                     <div className="pt-4">
                         <Button
                             size="lg"
-                            className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium text-xs uppercase tracking-[0.2em] px-12 h-12 transition-all hover:scale-105"
+                            // className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium text-xs uppercase tracking-[0.2em] px-12 h-12 transition-all hover:scale-105"
+                            className=""
                         >
-                            Order Now
+                            <Link href={"https://www.toasttab.com/local/order/yoyo-chicken-merrick-rd-rockville-280-merrick-rd/"}>
+                                Order Now
+                            </Link>
                         </Button>
                     </div>
                 </div>

@@ -1,23 +1,22 @@
 "use client"
 
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
-// import { VisuallyHidden } from "@/components/ui/visually-hidden"
-import { Menu, X } from 'lucide-react'
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { Menu } from 'lucide-react'
+import Link from "next/link"
 import { useState } from 'react'
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navLinks = [
-    { href: "#menu", label: "Menu" },
-    { href: "#about", label: "About" },
-    { href: "#contact", label: "Contact" },
+    { href: "/#about", label: "About" },
+    { href: "/menu", label: "Menu" },
+    { href: "/contact", label: "Contact" },
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur-lg supports-[backdrop-filter]:bg-background/60">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur-lg supports-backdrop-filter:bg-background/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -49,8 +48,11 @@ export function Navbar() {
             <Button
               size="sm"
               className="ml-4 h-9 px-6 text-xs font-semibold uppercase tracking-wider shadow-sm hover:shadow-md transition-all duration-200"
+              asChild
             >
-              Order Now
+              <Link href={"https://www.toasttab.com/local/order/yoyo-chicken-merrick-rd-rockville-280-merrick-rd"}>
+                Order Now
+              </Link>
             </Button>
           </div>
 
@@ -116,28 +118,17 @@ export function Navbar() {
                     size="lg"
                     className="w-full h-12 font-medium text-base rounded-xl shadow-sm hover:shadow-md transition-all duration-200"
                     onClick={() => setIsOpen(false)}
+                    asChild
                   >
-                    Order Now
+                    <Link href={"https://www.toasttab.com/local/order/yoyo-chicken-merrick-rd-rockville-280-merrick-rd"}>
+                      Order Now
+                    </Link>
                   </Button>
                   <p className="text-xs text-center text-muted-foreground">
                     Open Daily • 11AM - 10PM
                   </p>
                 </div>
               </div>
-
-              {/* Add keyframes for animation */}
-              <style jsx>{`
-                @keyframes slideIn {
-                  from {
-                    opacity: 0;
-                    transform: translateY(10px);
-                  }
-                  to {
-                    opacity: 1;
-                    transform: translateY(0);
-                  }
-                }
-              `}</style>
             </SheetContent>
           </Sheet>
         </div>

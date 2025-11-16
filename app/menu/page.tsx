@@ -268,40 +268,40 @@ export default function MenuPage() {
           </p>
         </div>
         <Tabs defaultValue="sandwiches" className="w-full">
-          <TabsList className="sticky top-20 z-40 w-full justify-start overflow-x-auto mb-6 h-auto flex-nowrap gap-3 sm:gap-6 bg-background/95 backdrop-blur-sm border-b border-border rounded-none py-3 px-1">
+          <TabsList className="w-full justify-center overflow-x-auto mb-8 h-auto flex-wrap sm:flex-nowrap gap-2 sm:gap-3 bg-muted/50 rounded-lg p-2">
             <TabsTrigger 
               value="sandwiches"
-              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-none bg-transparent border-b-2 border-transparent data-[state=active]:border-primary transition-colors px-3 sm:px-4 py-2 hover:text-foreground whitespace-nowrap"
+              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
             >
               Sandwiches
             </TabsTrigger>
             <TabsTrigger 
               value="platters"
-              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-none bg-transparent border-b-2 border-transparent data-[state=active]:border-primary transition-colors px-3 sm:px-4 py-2 hover:text-foreground whitespace-nowrap"
+              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
             >
               Platters
             </TabsTrigger>
             <TabsTrigger 
               value="bowls"
-              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-none bg-transparent border-b-2 border-transparent data-[state=active]:border-primary transition-colors px-3 sm:px-4 py-2 hover:text-foreground whitespace-nowrap"
+              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
             >
               Bowls
             </TabsTrigger>
             <TabsTrigger 
               value="sides"
-              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-none bg-transparent border-b-2 border-transparent data-[state=active]:border-primary transition-colors px-3 sm:px-4 py-2 hover:text-foreground whitespace-nowrap"
+              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
             >
               Sides
             </TabsTrigger>
             <TabsTrigger 
               value="desserts"
-              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-none bg-transparent border-b-2 border-transparent data-[state=active]:border-primary transition-colors px-3 sm:px-4 py-2 hover:text-foreground whitespace-nowrap"
+              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
             >
               Desserts
             </TabsTrigger>
             <TabsTrigger 
               value="beverages"
-              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-none bg-transparent border-b-2 border-transparent data-[state=active]:border-primary transition-colors px-3 sm:px-4 py-2 hover:text-foreground whitespace-nowrap"
+              className="text-xs sm:text-sm font-light tracking-[0.1em] uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
             >
               Beverages
             </TabsTrigger>
