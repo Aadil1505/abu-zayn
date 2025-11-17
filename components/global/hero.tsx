@@ -1,122 +1,54 @@
-// "use client"
 
-// import { Button } from "@/components/ui/button"
-// import Image from "next/image"
-// import Link from "next/link"
+export default function Hero() {
+  return (
+    <div className="relative w-full">
+      {/* Hero Section with Video Background */}
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Video Background - Desktop (16:9) */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover hidden md:block"
+          poster="/cover.png"
+        >
+          <source src="/cooking-hero.mp4" type="video/mp4" />
+          {/* <source src="/hero-video-desktop.webm" type="video/webm" /> */}
+          Your browser does not support the video tag.
+        </video>
 
-// export function Hero() {
-//     return (
-//         <section className="relative h-screen w-full overflow-hidden bg-background">
-//             <div className="absolute inset-0 z-0">
-//                 <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-100">
-//                     <source src="cooking-hero.mp4" type="video/mp4" />
-//                 </video>
-//                 <div className="absolute inset-0 bg-black/70" />
-//             </div>
+        {/* Video Background - Mobile (9:16) */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover md:hidden"
+          poster="mobile-cover.png"
+        >
+          <source src="/mobile-cooking-hero.mp4" type="video/mp4" />
+          {/* <source src="/hero-video-mobile.webm" type="video/webm" /> */}
+          Your browser does not support the video tag.
+        </video>
 
-//             <div className="relative z-10 h-full flex items-center justify-center px-6">
-//                 <div className="text-center max-w-6xl mx-auto space-y-12">
-//                     <div className="space-y-4">
-//                         {/* Logo Image */}
-//                         <div className="flex justify-center">
-//                             <Image
-//                                 src="/abu-zayn-transparent.png"
-//                                 alt="Abu Zayn"
-//                                 width={800}
-//                                 height={200}
-//                                 className="w-full max-w-2xl md:max-w-4xl lg:max-w-5xl h-auto"
-//                                 priority
-//                             />
-//                         </div>
-//                     </div>
+        {/* Overlay for better text readability */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
 
-//                     <div className="flex justify-center">
-//                         <div className="w-16 h-px bg-secondary" />
-//                     </div>
-
-//                     <p className="text-xs sm:text-sm md:text-base text-secondary font-semibold uppercase">
-//                         Classic Egyptian Excellence
-//                     </p>
-
-//                     <div className="pt-4">
-//                         <Button
-//                             size="lg"
-//                             // className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium text-xs uppercase tracking-[0.2em] px-12 h-12 transition-all hover:scale-105"
-//                         >
-//                             <Link href={"https://www.toasttab.com/local/order/yoyo-chicken-merrick-rd-rockville-280-merrick-rd/"}>
-//                                 ORDER NOW
-//                             </Link>
-//                         </Button>
-//                     </div>
-//                 </div>
-//             </div>
-
-//             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-//                 <div className="w-px h-12 bg-foreground" />
-//                 <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-//             </div>
-//         </section>
-//     )
-// }
-
-
-"use client"
-
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import Link from "next/link"
-
-export function Hero() {
-    return (
-        <section className="relative h-[100dvh] w-full overflow-hidden bg-background">
-            <div className="absolute inset-0 z-0">
-                <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-100">
-                    <source src="cooking-hero.mp4" type="video/mp4" />
-                </video>
-                <div className="absolute inset-0 bg-black/70" />
-            </div>
-
-            <div className="relative z-10 h-full flex items-center justify-center px-6">
-                <div className="text-center max-w-6xl mx-auto space-y-12">
-                    <div className="space-y-4">
-                        {/* Logo Image */}
-                        <div className="flex justify-center">
-                            <Image
-                                src="/abu-zayn-transparent.png"
-                                alt="Abu Zayn"
-                                width={800}
-                                height={200}
-                                className="w-full max-w-2xl md:max-w-4xl lg:max-w-5xl h-auto"
-                                priority
-                            />
-                        </div>
-                    </div>
-
-                    <div className="flex justify-center">
-                        <div className="w-16 h-px bg-secondary" />
-                    </div>
-
-                    <p className="text-xs sm:text-sm md:text-base text-secondary font-semibold uppercase">
-                        Classic Egyptian Excellence
-                    </p>
-
-                    <div className="pt-4">
-                        <Button
-                            size="lg"
-                            // className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium text-xs uppercase tracking-[0.2em] px-12 h-12 transition-all hover:scale-105"
-                        >
-                            <Link href={"https://www.toasttab.com/local/order/yoyo-chicken-merrick-rd-rockville-280-merrick-rd/"}>
-                                ORDER NOW
-                            </Link>
-                        </Button>
-                    </div>
-                </div>
-            </div>
-
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-                <div className="w-px h-12 bg-foreground" />
-                <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-            </div>
-        </section>
-    )
+        {/* Hero Content - Logo and Tagline */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white px-4">
+          <div className="flex flex-col items-center">
+            <img 
+              src="/abu-zayn-transparent.png" 
+              alt="Abu Zayn Logo" 
+              className="w-64 md:w-96 h-auto mb-8 drop-shadow-2xl"
+            />
+            <h2 className="text-2xl md:text-4xl font-semibold tracking-wider text-center drop-shadow-lg">
+              CLASSIC EGYPTIAN EXCELLENCE
+            </h2>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }
