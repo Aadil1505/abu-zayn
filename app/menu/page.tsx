@@ -288,6 +288,12 @@ export default function MenuPage() {
         </Tabs>
 
         <div className="mt-12 text-center border-t border-border pt-8">
+          <div className="flex flex-col items-center gap-4 mb-4">
+            <img src={"halal.png"} className='size-12'/>
+            <p className="text-sm font-medium text-foreground tracking-wide">
+              100% HALAL CERTIFIED
+            </p>
+          </div>
           <p className="text-xs text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
             Please inform your server of any dietary restrictions or allergies.
           </p>

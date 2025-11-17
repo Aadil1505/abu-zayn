@@ -78,9 +78,9 @@ export function Navbar() {
 
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-border/40">
-                <div className="rounded-full bg-white p-1.5 shadow-md ring-1 ring-border/30">
-                  <img src="/z-logo.png" alt="Logo" className="size-9" />
-                </div>
+                  <img src="/abu-zayn-transparent.png" alt="Logo" className="w-24" />
+                {/* <div className="rounded-full bg-white p-1.5 shadow-md ring-1 ring-border/30">
+                </div> */}
                 {/* <Button
                   variant="ghost"
                   size="icon"
