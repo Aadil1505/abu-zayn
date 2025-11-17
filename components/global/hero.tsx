@@ -1,4 +1,3 @@
-
 export default function Hero() {
   return (
     <div className="relative w-full">
@@ -33,7 +32,7 @@ export default function Hero() {
         </video>
 
         {/* Overlay for better text readability */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
+        <div className="absolute top-0 left-0 w-full h-full bg-black/50" />
 
         {/* Hero Content - Logo and Tagline */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white px-4">
@@ -41,10 +40,15 @@ export default function Hero() {
             <img 
               src="/abu-zayn-transparent.png" 
               alt="Abu Zayn Logo" 
-              className="w-64 md:w-96 h-auto mb-8 drop-shadow-2xl"
+              className="w-64 md:w-96 h-auto mb-6 drop-shadow-2xl"
             />
-            <h2 className="text-2xl md:text-4xl font-semibold tracking-wider text-center drop-shadow-lg">
-              CLASSIC EGYPTIAN EXCELLENCE
+            
+            {/* Separator Line */}
+            <div className="w-16 h-px bg-white/60 mb-4" />
+            
+            {/* Tagline */}
+            <h2 className="text-xs md:text-sm font-medium tracking-[0.3em] text-center uppercase text-white/90">
+              Classic Egyptian Excellence
             </h2>
           </div>
         </div>
