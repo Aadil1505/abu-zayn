@@ -19,14 +19,14 @@ export const Location = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-widest text-foreground mb-6">
-            VISIT US
-          </h2>
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed font-light">
-            Authentic Egyptian cusine in Rockville Center
-          </p>
-        </div>
-          
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-widest text-foreground mb-6">
+              VISIT US
+            </h2>
+            <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed font-light">
+              Authentic Egyptian cusine in Rockville Center
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="border-2 border-border">
               <CardContent className="p-8 space-y-6">
@@ -41,14 +41,14 @@ export const Location = () => {
                         280 Merrick Rd<br />
                         Rockville Centre, NY 11570
                       </p>
-                      <Button 
-                        variant="link" 
+                      <Button
+                        variant="link"
                         className="px-0 h-auto text-primary hover:text-primary/80 mt-2"
                         asChild
                       >
-                        <a 
-                          href="https://www.google.com/maps/search/?api=1&query=280%20Merrick%20Rd%2C%20Rockville%20Centre%2C%20NY%2011570" 
-                          target="_blank" 
+                        <a
+                          href="https://www.google.com/maps/search/?api=1&query=280%20Merrick%20Rd%2C%20Rockville%20Centre%2C%20NY%2011570"
+                          target="_blank"
                           rel="noopener noreferrer"
                         >
                           Get Directions →
@@ -56,22 +56,22 @@ export const Location = () => {
                       </Button>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
                       <Phone className="w-6 h-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg text-foreground mb-1">Phone</h3>
-                      <a 
-                        href="tel:5165039906" 
+                      <a
+                        href="tel:5165039906"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         (516) 503-9906
                       </a>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
                       <Clock className="w-6 h-6 text-primary" />
@@ -80,8 +80,8 @@ export const Location = () => {
                       <h3 className="font-semibold text-lg text-foreground mb-3">Hours</h3>
                       <div className="space-y-2">
                         {hours.map((item) => (
-                          <div 
-                            key={item.day} 
+                          <div
+                            key={item.day}
                             className="flex justify-between text-sm"
                           >
                             <span className={item.day === "Sunday" ? "text-muted-foreground/70" : "text-muted-foreground font-medium"}>
@@ -98,7 +98,7 @@ export const Location = () => {
                 </div>
               </CardContent>
             </Card>
-            
+
             <div className="rounded-lg overflow-hidden border-2 border-border shadow-lg h-full min-h-[400px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.5423456789!2d-73.6473!3d40.6560!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c26da1f8e1f1f1%3A0x1234567890abcdef!2s280%20Merrick%20Rd%2C%20Rockville%20Centre%2C%20NY%2011570!5e0!3m2!1sen!2sus!4v1234567890123"
@@ -112,17 +112,17 @@ export const Location = () => {
               />
             </div>
           </div>
-          
+
           <div className="mt-12 text-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_8px_32px_hsla(15,75%,55%,0.25)] hover:shadow-[0_8px_32px_hsla(15,75%,55%,0.4)] transition-all duration-300 font-semibold"
               asChild
             >
-                <Link href="https://www.toasttab.com/local/order/yoyo-chicken-merrick-rd-rockville-280-merrick-rd/">
-                
-                    ORDER PICKUP NOW
-                </Link>
+              <Link href="https://www.toasttab.com/local/order/yoyo-chicken-merrick-rd-rockville-280-merrick-rd/">
+
+                ORDER PICKUP NOW
+              </Link>
             </Button>
           </div>
         </div>

@@ -24,7 +24,7 @@ export function Navbar() {
             href="/" 
             className="group relative flex items-center gap-3 transition-all duration-200 hover:scale-105"
           >
-            <div className="rounded-full bg-white p-1 shadow-sm ring-2 ring-border/20 transition-all duration-200 group-hover:ring-primary/30 group-hover:shadow-md">
+            <div className="rounded-full bg-white p-1 shadow-sm ring-2 ring-border/20 transition-all duration-200 group-hover:ring-primary/30 group-hover:shadow-md border border-black">
               <img 
                 src="/z-logo.png" 
                 alt="Logo" 
