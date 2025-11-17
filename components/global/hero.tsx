@@ -31,10 +31,10 @@ export function Hero() {
                     </div>
 
                     <div className="flex justify-center">
-                        <div className="w-16 h-px bg-foreground" />
+                        <div className="w-16 h-px bg-secondary" />
                     </div>
 
-                    <p className="text-xs sm:text-sm md:text-base text-foreground font-semibold uppercase">
+                    <p className="text-xs sm:text-sm md:text-base text-secondary font-semibold uppercase">
                         Classic Egyptian Excellence
                     </p>
 
