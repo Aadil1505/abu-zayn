@@ -72,24 +72,13 @@ export function Navbar() {
               side="left" 
               className="w-[320px] sm:w-[360px] border-l border-border/40 bg-background/98 backdrop-blur-xl p-0 flex flex-col"
             >
-              {/* <VisuallyHidden> */}
                 <SheetTitle hidden>Navigation Menu</SheetTitle>
-              {/* </VisuallyHidden> */}
 
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-border/40">
+                <a href="/">
                   <img src="/abu-zayn-transparent.png" alt="Logo" className="w-24" />
-                {/* <div className="rounded-full bg-white p-1.5 shadow-md ring-1 ring-border/30">
-                </div> */}
-                {/* <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setIsOpen(false)}
-                  className="hover:bg-accent rounded-full transition-all duration-200"
-                  aria-label="Close menu"
-                >
-                  <X className="size-5" />
-                </Button> */}
+                </a>
               </div>
 
               {/* Content Container - Centered */}
@@ -125,7 +114,10 @@ export function Navbar() {
                     </Link>
                   </Button>
                   <p className="text-xs text-center text-muted-foreground">
-                    Open Daily • 11AM - 10PM
+                    Open Daily • 12PM - 10PM
+                  </p>
+                  <p className="text-xs text-center text-muted-foreground">
+                    Closed Sundays
                   </p>
                 </div>
               </div>
