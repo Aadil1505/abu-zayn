@@ -67,7 +67,7 @@ export const Location = () => {
                         href="tel:5165039906"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        (516) 503-9906
+                        (516) 220-0695
                       </a>
                     </div>
                   </div>

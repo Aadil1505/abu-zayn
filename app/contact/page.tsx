@@ -83,7 +83,7 @@ export default function ContactPage() {
                       href="tel:5165039906"
                       className="text-muted-foreground hover:text-primary transition-colors text-lg"
                     >
-                      (516) 503-9906
+                      (516) 220-0695
                     </a>
                     <p className="text-sm text-muted-foreground/80 mt-2">
                       Call us for takeout orders or questions
