@@ -18,14 +18,14 @@ export function Gallery() {
     <section id="photos" className="py-24 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-widest text-foreground mb-6">
+          <h2 className="text-7xl md:text-8xl lg:text-9xl font-blinds font-medium tracking-widest text-foreground mb-6">
             GALLERY
           </h2>
           <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed font-light">
             A glimpse into our culinary artistry and warm dining atmosphere
           </p>
         </div>
-        
+
         <div className="columns-2 gap-4 sm:columns-3">
           {images.map((imageUrl, idx) => (
             <BlurFade key={imageUrl} delay={0.25 + idx * 0.05} inView>

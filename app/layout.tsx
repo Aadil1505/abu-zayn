@@ -3,6 +3,13 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/global/navbar";
 import FooterSection from "@/components/global/footer";
+import localFont from 'next/font/local'
+ 
+// Font files can be colocated inside of `app`
+const blinds = localFont({
+  src: '../public/blinds.woff2',
+  variable: "--font-blinds",
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -105,7 +112,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${blinds.variable} antialiased`}
       >
         <Navbar/>
         {children}

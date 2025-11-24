@@ -10,10 +10,10 @@ export default function MenuPage() {
   const [activeTab, setActiveTab] = useState(menuData.categories[0].id)
 
   return (
-    <main className="min-h-screen bg-background pt-20">
+    <main className="min-h-screen bg-background pt-20 tracking-widest">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-6 sm:py-8">
         <div className="text-center mb-8">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-widest text-foreground mb-6">
+          <h2 className="text-7xl md:text-8xl lg:text-9xl font-blinds font-medium tracking-widest text-foreground mb-6">
             MENU
           </h2>
           <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed font-light">

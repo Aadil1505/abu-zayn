@@ -109,29 +109,29 @@ const ReviewCard = ({
 export function Reviews() {
   return (
     <>
-    
-    <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-widest text-foreground mb-6">
-              REVIEWS
-            </h2>
-            <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed font-light">
-              The People Love Us 
-            </p>
-          </div>
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
+
+      <div className="text-center mb-16">
+        <h2 className="text-7xl md:text-8xl lg:text-9xl font-blinds font-medium tracking-widest text-foreground mb-6">
+          REVIEWS
+        </h2>
+        <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed font-light">
+          The People Love Us
+        </p>
+      </div>
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+        <Marquee pauseOnHover className="[--duration:20s]">
+          {firstRow.map((review) => (
             <ReviewCard key={review.name} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
+          ))}
+        </Marquee>
+        <Marquee reverse pauseOnHover className="[--duration:20s]">
+          {secondRow.map((review) => (
             <ReviewCard key={review.name} {...review} />
-        ))}
-      </Marquee>
-      <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r"></div>
-      <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div>
-    </div>
+          ))}
+        </Marquee>
+        <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r"></div>
+        <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div>
+      </div>
     </>
   )
 }

@@ -19,7 +19,7 @@ export const Location = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-widest text-foreground mb-6">
+            <h2 className="text-7xl md:text-8xl lg:text-9xl font-blinds font-medium tracking-widest text-foreground mb-6">
               VISIT US
             </h2>
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed font-light">

@@ -17,7 +17,7 @@ export default function AboutSection() {
                         </span>
                         <div className="h-px w-8 bg-primary" />
                     </div>
-                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-widest text-foreground mb-6">
+                    <h2 className="text-7xl md:text-8xl lg:text-9xl font-blinds font-medium tracking-widest text-foreground mb-6">
                         ABOUT US
                     </h2>
                 </div>
@@ -51,16 +51,6 @@ export default function AboutSection() {
 
                         {/* View Menu Button */}
                         <div className="pt-4 sm:pt-6">
-                            {/* <Button 
-                                asChild
-                                size="lg"
-                                className="bg-orange-500 hover:bg-orange-600 text-white"
-                            >
-                                <a href="#menu">
-                                    <ChefHat className="mr-2 h-5 w-5" />
-                                    View Our Menu
-                                </a>
-                            </Button> */}
                             <Link href="/menu">
                                 <ShinyButton>
                                     VIEW OUR MENU
