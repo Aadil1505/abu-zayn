@@ -1,0 +1,30 @@
+{
+  "name": "Abu Zayn - Authentic Egyptian Cuisine",
+  "short_name": "Abu Zayn",
+  "description": "Authentic Egyptian restaurant in Rockville Centre, Long Island. Serving traditional halal dishes.",
+  "start_url": "/",
+  "categories": ["food", "restaurant", "lifestyle"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "View Menu",
+      "short_name": "Menu",
+      "description": "Browse our Egyptian cuisine menu",
+      "url": "/menu"
+    },
+    {
+      "name": "Order Now",
+      "short_name": "Order",
+      "description": "Order food for pickup",
+      "url": "https://www.toasttab.com/local/order/yoyo-chicken-merrick-rd-rockville-280-merrick-rd"    
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/contact"
+    }
+  ]
+}

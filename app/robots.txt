@@ -1,0 +1,9 @@
+# Abu Zayn Restaurant - robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap location - CHANGE TO YOUR DOMAIN
+Sitemap: https://abuzaynnyc.com/sitemap.xml
