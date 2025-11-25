@@ -6,7 +6,7 @@ export function Platter() {
         <section id="platter" className="py-20 px-4 sm:px-6 lg:px-8">
             <div className="container max-w-7xl mx-auto">
                 {/* Gradient card */}
-                <div className="relative bg-gradient-to-br from-primary via-primary to-orange-600 rounded-2xl lg:rounded-3xl p-6 py-8 sm:p-12 lg:p-16 xl:p-20 shadow-xl overflow-hidden">
+                <div className="relative bg-linear-to-br from-primary via-primary to-orange-600 rounded-2xl lg:rounded-3xl p-6 py-8 sm:p-12 lg:p-16 xl:p-20 shadow-xl overflow-hidden">
                     <div className="relative grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
                         {/* Content */}
                         <div className="text-center lg:text-left space-y-6">
