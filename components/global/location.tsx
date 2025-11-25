@@ -101,7 +101,7 @@ export const Location = () => {
 
             <div className="rounded-lg overflow-hidden border-2 border-border shadow-lg h-full min-h-[400px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.5423456789!2d-73.6473!3d40.6560!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c26da1f8e1f1f1%3A0x1234567890abcdef!2s280%20Merrick%20Rd%2C%20Rockville%20Centre%2C%20NY%2011570!5e0!3m2!1sen!2sus!4v1234567890123"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.816539591395!2d-73.64769912390068!3d40.655974341043546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c27bdd935f8889%3A0xbe54b10e99e9102e!2sAbu%20Zayn!5e0!3m2!1sen!2sus!4v1764044777892!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
