@@ -6,15 +6,9 @@ export function Platter() {
         <section id="platter" className="py-20 px-4 sm:px-6 lg:px-8">
             <div className="container max-w-7xl mx-auto">
                 {/* Gradient card */}
-                <div className="relative bg-gradient-to-br from-primary via-primary to-orange-600 rounded-2xl lg:rounded-3xl p-8 sm:p-12 lg:p-16 xl:p-20 shadow-xl overflow-hidden">
-                    
-                    {/* Decorative blur elements */}
-                    <div className="absolute inset-0 pointer-events-none">
-                        <div className="absolute top-0 right-0 size-64 sm:size-96 bg-white/5 rounded-full blur-3xl" />
-                        <div className="absolute bottom-0 left-0 size-64 sm:size-96 bg-black/10 rounded-full blur-3xl" />
-                    </div>
+                <div className="relative bg-gradient-to-br from-primary via-primary to-orange-600 rounded-2xl lg:rounded-3xl p-6 py-8 sm:p-12 lg:p-16 xl:p-20 shadow-xl overflow-hidden">
 
-                    <div className="relative grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div className="relative grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
                         {/* Content */}
                         <div className="text-center lg:text-left space-y-6">
                             <span className="inline-block text-secondary-foreground/90 text-xs sm:text-sm uppercase tracking-widest font-medium">
@@ -30,7 +24,7 @@ export function Platter() {
                             </p>
 
                             {/* CTA Buttons */}
-                            <div className="flex sm:flex-row gap-3 justify-center lg:justify-start pt-2">
+                            <div className="flex gap-3 justify-center lg:justify-start pt-2">
                                 <Button variant="secondary" size="lg" asChild>
                                     <Link href="/menu">
                                         VIEW MENU
@@ -44,23 +38,17 @@ export function Platter() {
                             </div>
                         </div>
 
-                        {/* Platter Image */}
+                        {/* Platter Images */}
                         <div className="relative lg:absolute lg:right-4 xl:right-8 lg:top-1/2 lg:-translate-y-1/2 lg:w-2/5 xl:w-1/3">
-                            <div className="relative w-full max-w-sm lg:max-w-md mx-auto flex ">
-                                {/* Glow effect */}
-                                <div className="absolute inset-0 bg-orange-400/30 blur-3xl scale-75 animate-pulse" />
-                                
-                                {/* Image */}
-                                <img
-                                    src="platter.png"
-                                    alt="Abu Zayn signature platter with grilled meats and sides"
-                                    className="relative w-full h-auto drop-shadow-2xl transition-transform duration-300 hover:scale-105"
-                                />
-                                <img
-                                    src="platter.png"
-                                    alt="Abu Zayn signature platter with grilled meats and sides"
-                                    className="relative w-full h-auto opacity-20"
-                                />
+                            <div className="relative max-w-sm lg:max-w-md mx-auto">
+                                <div className="relative flex items-center justify-center">
+                                    {/* Main centered image */}
+                                    <img
+                                        src="platter.png"
+                                        alt="Abu Zayn signature platter with grilled meats and sides"
+                                        className="relative w-3/4 md:w-full drop-shadow-2xl transition-transform duration-500 hover:scale-105 z-10"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
