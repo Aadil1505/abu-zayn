@@ -5,7 +5,7 @@ export default function AboutSection() {
     return (
         <section id='about' className="relative py-24 md:py-32 lg:py-40">
             {/* Subtle gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-orange-50/10 to-background dark:via-orange-950/5" />
+            <div className="absolute inset-0 bg-linear-to-b from-background via-orange-50/10 to-background dark:via-orange-950/5" />
 
             <div className="container relative mx-auto max-w-6xl px-6">
                 {/* Header */}
@@ -26,7 +26,7 @@ export default function AboutSection() {
                 <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center max-w-5xl mx-auto">
                     {/* Image */}
                     <figure className="relative group">
-                        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
+                        <div className="relative aspect-4/3 rounded-2xl overflow-hidden border border-border shadow-lg">
                             <img
                                 src="food-gif.gif"
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
