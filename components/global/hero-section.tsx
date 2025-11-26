@@ -159,7 +159,7 @@ export default function HeroCarousel() {
       <Button
         className="absolute bottom-12 left-8 z-20 font-semibold shadow-2xl transition-transform hover:scale-105 pointer-events-auto"
       >
-        <Link href={"https://www.toasttab.com/local/order/yoyo-chicken-753-merrick-rd-baldwin-753-merrick-rd"}>
+        <Link href={"https://www.toasttab.com/local/order/yoyo-chicken-merrick-rd-rockville-280-merrick-rd"}>
           ORDER NOW
         </Link>
       </Button>
