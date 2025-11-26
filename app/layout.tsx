@@ -24,6 +24,16 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://abuzaynnyc.com'), // CHANGE TO YOUR DOMAIN
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' }
+    ],
+    shortcut: ['/favicon.ico'],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }
+    ],
+  },
   title: {
     default: "Abu Zayn - Authentic Egyptian Cuisine in Rockville Centre, NY",
     template: "%s | Abu Zayn Restaurant"
