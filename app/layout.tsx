@@ -24,26 +24,20 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://abuzaynnyc.com'), // CHANGE TO YOUR DOMAIN
-  icons: {
-    icon: [
-      { url: '/icon.png', sizes: '192x192', type: 'image/png' },
-      { url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' }
-    ],
-    shortcut: ['/favicon.ico'],
-    apple: [
-      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }
-    ],
-  },
   title: {
     default: "Abu Zayn - Authentic Egyptian Cuisine in Rockville Centre, NY",
     template: "%s | Abu Zayn Restaurant"
   },
   description: "Experience authentic Egyptian cuisine in Rockville Centre, Long Island. Serving traditional halal dishes including koshary, shawarma, falafel, and more. Order online for pickup at 280 Merrick Rd.",
   keywords: [
+    "Abu Zayn",
+    "Abu Zayn rvc",
+    "Abu Zayn Rockville Centre",
+    "Abu Zayn restaurant",
     "Egyptian restaurant",
     "Egyptian food",
     "halal restaurant",
-    "halal edgyptian food near me",
+    "halal egyptian food near me",
     "Mediterranean food",
     "Middle Eastern cuisine",
     "Rockville Centre restaurants",
@@ -106,6 +100,20 @@ export const metadata: Metadata = {
   verification: {
     google: "iyL_-MRLtSQzJaIDDE7WFtC06HLVGwROSNW7wTbQ6To", // ADD YOUR VERIFICATION CODE
   },
+  // icons: {
+  //   icon: [
+  //     { url: '/icon0.svg', type: 'image/svg+xml' },
+  //     { url: '/icon1.png', sizes: 'any' }
+  //   ],
+  //   apple: '/apple-icon.png',
+  //   other: [
+  //     {
+  //       rel: 'icon',
+  //       url: '/favicon.ico',
+  //     },
+  //   ],
+  // },
+  // manifest: '/manifest.json',
   other: {
     "geo.region": "US-NY",
     "geo.placename": "Rockville Centre",
