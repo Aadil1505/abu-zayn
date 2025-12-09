@@ -1,6 +1,7 @@
 'use client'
 
 import * as React from 'react'
+import Image from 'next/image'
 import { Play, Pause, ShoppingCart } from 'lucide-react'
 import {
   Carousel,
@@ -121,12 +122,16 @@ export default function HeroCarousel() {
                   autoPlay
                   muted
                   playsInline
+                  preload="none"
                 />
               ) : (
-                <img
+                <Image
                   src={slide.src}
                   alt={slide.title}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="100vw"
+                  priority={index === 1}
                 />
               )}
             </CarouselItem>
@@ -137,10 +142,13 @@ export default function HeroCarousel() {
       {/* Logo and Tagline - Center */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 pointer-events-none">
         <div className="flex flex-col items-center">
-          <img 
-            src="/abu-zayn-transparent.png" 
-            alt="Abu Zayn Logo" 
+          <Image
+            src="/abu-zayn-transparent.webp"
+            alt="Abu Zayn Logo"
+            width={384}
+            height={384}
             className="w-64 md:w-96 h-auto mb-6 drop-shadow-2xl"
+            priority
           />
           
           {/* Separator Line */}

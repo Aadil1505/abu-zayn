@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from 'lucide-react'
@@ -25,10 +26,12 @@ export function Navbar() {
             className="group relative flex items-center gap-3 transition-all duration-200 hover:scale-105"
           >
             <div className="rounded-full bg-white p-1 shadow-sm ring-2 ring-border/20 transition-all duration-200 group-hover:ring-primary/30 group-hover:shadow-md border border-black">
-              <img 
-                src="/z-logo.png" 
-                alt="Logo" 
-                className="size-10 transition-transform duration-200 group-hover:rotate-12" 
+              <Image
+                src="/z-logo.webp"
+                alt="Logo"
+                width={40}
+                height={40}
+                className="size-10 transition-transform duration-200 group-hover:rotate-12"
               />
             </div>
           </Link>
@@ -77,7 +80,7 @@ export function Navbar() {
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-border/40">
                 <a href="/">
-                  <img src="/abu-zayn-transparent.png" alt="Logo" className="w-24" />
+                  <Image src="/abu-zayn-transparent.webp" alt="Logo" width={96} height={96} className="w-24" />
                 </a>
               </div>
 

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image"
 import { menuData } from "@/components/menu/menu"
 import { MenuCard } from "@/components/menu/menu-card"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
@@ -47,10 +48,13 @@ export default function MenuPage() {
 
         <div className="mt-12 text-center border-t border-border pt-8">
           <div className="flex flex-col items-center gap-4 mb-4">
-            <img 
-              src={"halal.png"} 
+            <Image
+              src="/halal.webp"
+              width={48}
+              height={48}
               className='size-12 invert-100'
               alt="Halal Certified"
+              loading="lazy"
             />
             <p className="text-sm font-medium text-primary-foreground tracking-wide">
               100% HALAL CERTIFIED

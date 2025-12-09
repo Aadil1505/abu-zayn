@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     description: "Experience authentic Egyptian cuisine in Rockville Centre. Traditional halal dishes made with love. Visit us at 280 Merrick Rd or order online for pickup.",
     images: [
       {
-        url: "food-gif.gif", // CREATE THIS IMAGE (1200x630px)
+        url: "/platter.webp", // Optimized image for social sharing
         width: 1200,
         height: 630,
         alt: "Abu Zayn Restaurant - Authentic Egyptian Cuisine",
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Abu Zayn - Authentic Egyptian Cuisine",
     description: "Traditional Egyptian halal cuisine in Rockville Centre, Long Island. Order online for pickup!",
-    images: ["food-gif.gif"], // CREATE THIS IMAGE
+    images: ["/platter.webp"], // Optimized image for social sharing
     creator: "@abuzaynnyc",
   },
   robots: {

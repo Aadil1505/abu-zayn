@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 const links = [
@@ -23,7 +24,7 @@ export default function FooterSection() {
                     href="/"
                     aria-label="go home"
                     className="mx-auto block size-fit">
-                    <img src={"abu-zayn-transparent.png"} />
+                    <Image src="/abu-zayn-transparent.webp" alt="Abu Zayn Logo" width={200} height={100} className="w-auto h-auto" />
                 </Link>
 
                 <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">

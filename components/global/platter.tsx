@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "../ui/button"
 
@@ -38,16 +39,23 @@ export function Platter() {
                             <div className="relative max-w-sm lg:max-w-md mx-auto">
                                 <div className="relative flex items-center justify-center">
                                     {/* Main centered image */}
-                                    <img
-                                        src="platter.png"
+                                    <Image
+                                        src="/platter.webp"
                                         alt="Abu Zayn signature platter with grilled meats and sides"
+                                        width={600}
+                                        height={600}
                                         className="relative w-3/4 md:w-full drop-shadow-2xl transition-transform duration-500 hover:scale-105 z-10"
+                                        loading="lazy"
                                     />
                                     {/* Second platter image - half out of container at right */}
-                                    <img
-                                        src="platter.png"
+                                    <Image
+                                        src="/platter.webp"
                                         alt="Abu Zayn signature platter"
+                                        width={600}
+                                        height={600}
                                         className="absolute left-45 translate-x-1/2 w-3/4 md:w-full opacity-20 drop-shadow-2xl"
+                                        loading="lazy"
+                                        aria-hidden="true"
                                     />
                                 </div>
                             </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ShinyButton } from '../ui/shiny-button'
 
@@ -27,10 +28,14 @@ export default function AboutSection() {
                     {/* Image */}
                     <figure className="relative group">
                         <div className="relative aspect-4/3 rounded-2xl overflow-hidden border border-border shadow-lg">
-                            <img
-                                src="food-gif.gif"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                alt="Abu Zayn restaurant interior in Rockville Centre"
+                            <video
+                                src="/food-gif.mp4"
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                preload="none"
                             />
                         </div>
                     </figure>

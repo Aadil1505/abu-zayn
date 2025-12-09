@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 
@@ -18,10 +19,13 @@ export function MenuCard({ item }: MenuCardProps) {
   return (
     <Card className="group overflow-hidden bg-card border-border/50 hover:border-primary/50 transition-all duration-500 flex flex-col">
       <div className="relative aspect-square overflow-hidden bg-muted/30">
-        <img
-          src={item.image || "abu-zayn-transparent.png"}
+        <Image
+          src={item.image || "/abu-zayn-transparent.webp"}
           alt={item.name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+          fill
+          className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          loading="lazy"
         />
         {item.outOfStock && (
           <div className="absolute inset-0 bg-background/80 flex items-center justify-center">
