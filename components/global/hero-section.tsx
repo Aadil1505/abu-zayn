@@ -2,7 +2,8 @@
 
 import * as React from 'react'
 import Image from 'next/image'
-import { Play, Pause, ShoppingCart } from 'lucide-react'
+import { Play, Pause } from 'lucide-react'
+import { useInView } from 'motion/react'
 import {
   Carousel,
   CarouselContent,
@@ -37,6 +38,8 @@ export default function HeroCarousel() {
   const [count, setCount] = React.useState(0)
   const [videoPlaying, setVideoPlaying] = React.useState(true)
   const videoRef = React.useRef<HTMLVideoElement>(null)
+  const carouselRef = React.useRef<HTMLDivElement>(null)
+  const isInView = useInView(carouselRef, { amount: 0.5 })
   const autoplayRef = React.useRef(
     Autoplay({
       delay: 5000,
@@ -59,13 +62,13 @@ export default function HeroCarousel() {
 
   React.useEffect(() => {
     if (videoRef.current && current === 1) {
-      if (videoPlaying) {
+      if (videoPlaying && isInView) {
         videoRef.current.play()
       } else {
         videoRef.current.pause()
       }
     }
-  }, [videoPlaying, current])
+  }, [videoPlaying, current, isInView])
 
   // Handle video ended event to advance to next slide
   React.useEffect(() => {
@@ -101,7 +104,7 @@ export default function HeroCarousel() {
   }
 
   return (
-    <div className="relative h-dvh w-full overflow-hidden bg-background">
+    <div ref={carouselRef} className="relative h-dvh w-full overflow-hidden bg-background">
       <Carousel
         setApi={setApi}
         plugins={[autoplayRef.current]}

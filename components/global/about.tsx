@@ -1,8 +1,24 @@
-import Image from 'next/image'
+'use client'
+
 import Link from 'next/link'
+import { useInView } from 'motion/react'
+import { useEffect, useRef } from 'react'
 import { ShinyButton } from '../ui/shiny-button'
 
 export default function AboutSection() {
+    const videoRef = useRef<HTMLVideoElement>(null)
+    const isInView = useInView(videoRef, { amount: 0.5 })
+
+    useEffect(() => {
+        if (!videoRef.current) return
+
+        if (isInView) {
+            videoRef.current.play()
+        } else {
+            videoRef.current.pause()
+        }
+    }, [isInView])
+
     return (
         <section id='about' className="relative py-24 md:py-32 lg:py-40">
             {/* Subtle gradient background */}
@@ -29,9 +45,9 @@ export default function AboutSection() {
                     <figure className="relative group">
                         <div className="relative aspect-4/3 rounded-2xl overflow-hidden border border-border shadow-lg">
                             <video
+                                ref={videoRef}
                                 src="/food-gif.mp4"
                                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                autoPlay
                                 loop
                                 muted
                                 playsInline
