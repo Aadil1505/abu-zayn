@@ -5,52 +5,52 @@ export const menuData = {
       name: 'Sandwiches',
       items: [
         {
-          name: 'Lamb Kebab Pita',
-          description: 'Beef kabab in a Pita with your choice of toppings and sauces.',
-          price: '$12',
-          image: 'https://d1w7312wesee68.cloudfront.net/cJ38kabgB1zavPuif2kAJXRAuD7DvRfuKF54ZrMtEWo/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/3ff5df1d-aff4-497c-8d05-125ce120f3b7.jpg',
-        },
-        {
-          name: 'Beef Shawarma Kaiser',
-          description: 'Beef shawarma, on brioche bun, w/baby arugula, pickles, onions, parsley, your choice of sauce.',
-          price: '$8.99',
-          image: 'https://d1w7312wesee68.cloudfront.net/cWmEflBecXbZvppaquIbnzBHBdKMm0VC39qyg147XOM/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/2ccd34f2-3a32-413e-afb9-91eb53cdc04b.jpg',
-        },
-        {
-          name: 'Beef Shawarma Pita',
-          description: 'Beef shawarma, on pita, w/baby arugula, pickles, onions, parsley, your choice of sauce.',
-          price: '$13',
-          image: 'https://d1w7312wesee68.cloudfront.net/33mTzzOQQR11rUpf6BmDtWgI_7FP-zA0XaF8L_HaX8c/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/0d48934b-e1d8-4b6b-840f-15f258c7ecd7.jpg',
-        },
-        {
-          name: 'Chicken Shawarma Kaiser',
-          description: 'Chicken shawarma, on brioche bun, w/baby arugula, pickles, onions, parsley, your choice of sauce.',
-          price: '$7.99',
-          image: 'https://d1w7312wesee68.cloudfront.net/6aruXylPfQ6JZ0Bh7vLWX3rVBo8oYbypm-65pDBL6Rs/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/dfb7f885-4142-472b-b627-dfe6c832ae77.jpg',
-        },
-        {
           name: 'Chicken Shawarma Pita',
-          description: 'Chicken shawarma, on pita, w/baby arugula, pickles, onions, parsley, your choice of sauce.',
-          price: '$11',
+          description: 'chicken shawarma , on pita , w/baby arugula , pickles , onions , parsley , your choice of sauce.',
+          price: '$11.95',
           image: 'https://d1w7312wesee68.cloudfront.net/XK5nQGMkWr7OF1I_2BdcPwd0E2pciG6lk-7wuvxQPQM/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/0f88ba83-0a07-4577-bda9-cfa8735f98c1.jpg',
         },
         {
-          name: 'Falafel Pita',
-          description: 'Falafel, on pita, w/baby arugula, pickles, onions, parsley, your choice of sauce.',
-          price: '$10',
-          image: 'https://d1w7312wesee68.cloudfront.net/dCEsjsNCaUdZOvRM2C1zMol6A_x38o0HpQHLqdSbm6s/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/7300d20d-953c-4cf5-aa0b-ad3f9b9103d3.jpg',
+          name: 'Beef Shawarma Pita',
+          description: 'Beef shawarma , on pita , w/baby arugula , pickles , onions , parsley , your choice of sauce.',
+          price: '$12.95',
+          image: 'https://d1w7312wesee68.cloudfront.net/33mTzzOQQR11rUpf6BmDtWgI_7FP-zA0XaF8L_HaX8c/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/0d48934b-e1d8-4b6b-840f-15f258c7ecd7.jpg',
+        },
+        {
+          name: 'mix shawarma pita',
+          description: '',
+          price: '$14',
+          image: '/abu-zayn.jpg',
+        },
+        {
+          name: 'Beef Kofta Sandwich',
+          description: 'kofta  , on french baguette , w/baby arugula , pickles , onions , parsley , your choice of sauce.',
+          price: '$13',
+          image: 'https://d1w7312wesee68.cloudfront.net/EABwCUidMuwW93vCcHKcdttGXVtIYJ05yh1_DV_YtBM/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/b61e7f4f-6051-4cb0-996d-2aca9bd09b1b.jpg',
+        },
+        {
+          name: 'Chicken kofta sandwich',
+          description: 'chicken shawarma  , on brioche bun , w/baby arugula , pickles , onions , parsley , your choice of sauce.',
+          price: '$12',
+          image: 'https://d1w7312wesee68.cloudfront.net/6aruXylPfQ6JZ0Bh7vLWX3rVBo8oYbypm-65pDBL6Rs/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/dfb7f885-4142-472b-b627-dfe6c832ae77.jpg',
+        },
+        {
+          name: 'Lamb Kebab Pita',
+          description: 'Beef kabab in a Pita with your choice of toppings and sauces.',
+          price: '$13',
+          image: 'https://d1w7312wesee68.cloudfront.net/cJ38kabgB1zavPuif2kAJXRAuD7DvRfuKF54ZrMtEWo/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/3ff5df1d-aff4-497c-8d05-125ce120f3b7.jpg',
         },
         {
           name: 'Fried Shrimp Pita',
-          description: 'Fried shrimp, on pita, w/baby arugula, pickles, onions, parsley, your choice of sauce.',
-          price: '$13',
+          description: 'fried shrimp , on pita  , w/baby arugula , pickles , onions , parsley , your choice of sauce.',
+          price: '$14',
           image: 'https://d1w7312wesee68.cloudfront.net/KU96OceoeiRUxjV31G6b5VQ4owHHaHsFO40HYPn9nno/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/72362c7f-5408-4ebb-9a5e-9d1031d37f1b.jpg',
         },
         {
-          name: 'Kofta Sandwiches',
-          description: 'Kofta, on french baguette, w/baby arugula, pickles, onions, parsley, your choice of sauce.',
-          price: '$12',
-          image: 'https://d1w7312wesee68.cloudfront.net/EABwCUidMuwW93vCcHKcdttGXVtIYJ05yh1_DV_YtBM/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/b61e7f4f-6051-4cb0-996d-2aca9bd09b1b.jpg',
+          name: 'Falafel PIta',
+          description: 'falafel , on pita  , w/baby arugula , pickles , onions , parsley , your choice of sauce.',
+          price: '$8.95',
+          image: 'https://d1w7312wesee68.cloudfront.net/dCEsjsNCaUdZOvRM2C1zMol6A_x38o0HpQHLqdSbm6s/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/7300d20d-953c-4cf5-aa0b-ad3f9b9103d3.jpg',
         },
         {
           name: 'Shish Tawook Pita',
@@ -59,15 +59,35 @@ export const menuData = {
           image: 'https://d1w7312wesee68.cloudfront.net/b2pNvAz0h9ULxYKDDvd3MAR92PRTyANCyORmbJDvEEw/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/eff7244f-ec27-4937-a2eb-a040cb292095.jpg',
         },
         {
-          name: 'Mix Shawarma Pita',
+          name: 'Beef Shawarma Kaiser',
+          description: 'Beef shawarma , on brioche bun  , w/baby arugula , pickles , onions , parsley , your choice of sauce.',
+          price: '$8.99',
+          image: 'https://d1w7312wesee68.cloudfront.net/cWmEflBecXbZvppaquIbnzBHBdKMm0VC39qyg147XOM/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/2ccd34f2-3a32-413e-afb9-91eb53cdc04b.jpg',
+
+        },
+        {
+          name: 'mix shawarma kaiser',
           description: '',
-          price: '$14',
+          price: '$8.99',
+          image: '/abu-zayn.jpg',
+
+        },
+        {
+          name: 'Chicken Shawarma Laffa',
+          description: '',
+          price: '$16',
           image: '/abu-zayn.jpg',
         },
         {
-          name: 'Mix Shawarma Kaiser',
+          name: 'Beef Shawarma Laffa',
           description: '',
-          price: '$8.99',
+          price: '$17',
+          image: '/abu-zayn.jpg',
+        },
+        {
+          name: 'Egyptian Hawashi',
+          description: '',
+          price: '$10',
           image: '/abu-zayn.jpg',
         },
       ]
@@ -91,43 +111,31 @@ export const menuData = {
         {
           name: 'Lamb Kebab Platter',
           description: 'Skewered beef kabobs seared over open flame, piled on rice, and crowned with caramelized onions and a char-kissed tomato.',
-          price: '$20',
+          price: '$26',
           image: 'https://d1w7312wesee68.cloudfront.net/sb18j3OdFsvqsCU_FM5aiLlq_rC1rO97IDXQnqXKmJU/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/8be59589-2a51-424c-8aac-91383b75ceb5.jpg',
         },
         {
           name: 'Lamb Chops Platter',
-          description: 'House-marinated New Zealand halal lamb with bold Egyptian spices, piled on rice and crowned with caramelized onions and a char-kissed tomato.',
-          price: '$28',
+          description: 'House-marinated 8oz New Zealand halal lamb with bold Egyptian spices, piled on rice and crowned with caramelized onions and a char-kissed tomato.',
+          price: '$35',
           image: 'https://d1w7312wesee68.cloudfront.net/jV9ua6H7fxQ168uDNvOlzUkqNmPGoXFj2Y9aKbY3TK4/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/e1a1f077-4cb5-452d-ac86-99b07fb3957a.jpg',
-        },
-        {
-          name: 'Ribeye Steak Platter',
-          description: 'Comes w/ Choice rice or fries and a side of salad.',
-          price: '$30',
-          image: 'https://d1w7312wesee68.cloudfront.net/aDt6m67q7iGCIJbwiWl5rC9nx_yl-kK3iWxH58malw8/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/71b10781-0c4f-45be-89ff-baf80f349364.jpg',
-        },
-        {
-          name: 'Rotisserie Chicken Platter',
-          description: 'Comes w/ Choice rice or fries and a side of salad.',
-          price: '$28',
-          image: 'https://d1w7312wesee68.cloudfront.net/LlcrT_gQYxRGil-NGAT5OnLOLJF1TxHA1qIyv1--Vqk/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/da717c09-dde2-4f2f-8735-daa187dc0ff5.jpg',
         },
         {
           name: 'Half Chicken Platter',
           description: 'Egyptian-style half chicken marinated in bold spices, fire-roasted to juicy perfection, served with caramelized onions and a smoky grilled tomato',
-          price: '$18',
+          price: '$19',
           image: 'https://d1w7312wesee68.cloudfront.net/HNAQ18vJkFlXPWs1Jmek7jWkHDptLxEvxIdo2qHbgXU/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/a7ba7019-1138-42e3-b2f7-9dea6dbabad5.jpg',
         },
         {
           name: 'Mix Grill Platter',
           description: 'Build your perfect mixed grill—choose three sizzling skewers like beef kabob, chicken kofta, or chicken kebab—piled on rice and crowned with caramelized onions and a char-kissed tomato.',
-          price: '$30',
+          price: '$40',
           image: 'https://d1w7312wesee68.cloudfront.net/sgTf9r6kKfvcNM9JgbBAcHC2viinj-6NSFOzPgfDKIc/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/9d7293b8-a880-4cfa-a2cc-2f4a2e43e6ef.jpg',
         },
         {
           name: 'Chicken Kofta Platter',
           description: 'Spiced ground-chicken kofta skewers seared over open flame, piled on rice, and crowned with caramelized onions and a char-kissed tomato.',
-          price: '$19',
+          price: '$18',
           image: 'https://d1w7312wesee68.cloudfront.net/-FWsmQbWMOJz3eWYTOn_wvqY5pkZto4IUsL6wV9DTuU/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/8088932f-8882-4ee7-b890-78842186e5dd.jpg',
         },
       ]
@@ -154,6 +162,18 @@ export const menuData = {
           price: '$20',
           image: 'https://d1w7312wesee68.cloudfront.net/bv2gTUKdAvBOXYou8U2IAWGfYbZkmx8xBMJOVYYQTRw/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/f113d400-625a-41f2-b28b-b252d809905b.jpg',
         },
+        {
+          name: 'Falafel Bowl',
+          description: '',
+          price: '$12',
+          image: '/abu-zayn.jpg',
+        },
+        {
+          name: 'Shrimp Bowl',
+          description: '',
+          price: '$19',
+          image: '/abu-zayn.jpg',
+        },
       ]
     },
     {
@@ -177,6 +197,7 @@ export const menuData = {
           description: '',
           price: '$7 / $12',
           image: 'https://d1w7312wesee68.cloudfront.net/mj_UDDOkIWys5ccndbVLxtyHiHW8kEM4aKbhoLeI1eI/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/f4709c09-462b-4e0b-a77f-40051bc55f5b.jpg',
+
         },
         {
           name: 'Hummus',
@@ -205,14 +226,40 @@ export const menuData = {
         {
           name: 'Pita Chips',
           description: '',
-          price: '$3.50',
+          price: '$3.5',
           image: '/abu-zayn.jpg',
+
         },
         {
           name: 'Moussaka',
           description: 'Roasted eggplant baked in a spiced tomato sauce with onions, garlic, and fragrant herbs for a classic Egyptian moussaka.',
           price: '$8 / $14',
           image: '/abu-zayn.jpg',
+        },
+        {
+          name: 'Pita',
+          description: '',
+          price: '$1.5',
+          image: '/abu-zayn.jpg',
+        },
+        {
+          name: 'Mezze Platter',
+          description: '',
+          price: '$25',
+          image: '/abu-zayn.jpg',
+        },
+        {
+          name: '5pc Falafel',
+          description: '',
+          price: '$5',
+          image: '/abu-zayn.jpg',
+        },
+        {
+          name: 'Macarona Bechamel (Egyptian Lasagna)',
+          description: '',
+          price: '$8',
+          image: '/abu-zayn.jpg',
+
         },
       ]
     },
@@ -223,26 +270,28 @@ export const menuData = {
         {
           name: 'Om Ali',
           description: '',
-          price: '$3.50',
+          price: '$7',
           image: '/abu-zayn.jpg',
         },
         {
           name: 'Rice Pudding',
           description: '',
-          price: '$3.50',
+          price: '$6',
           image: 'https://d1w7312wesee68.cloudfront.net/WhzsnpTU5agax8n5JqL28_5yxAH4IpzORjZJ8MgmcBI/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/7d70e938-a1e7-45a0-9a9c-39f2ba6bf9ce.jpg',
         },
         {
           name: 'Egyptian Basbousa',
           description: '',
-          price: '$3.50',
+          price: '$6',
           image: '/abu-zayn.jpg',
+
         },
         {
           name: 'Blueberry Cream Cheese Basbousa',
           description: '',
-          price: '$3.50',
+          price: '$3.5',
           image: '/abu-zayn.jpg',
+
         },
       ]
     },
@@ -253,7 +302,7 @@ export const menuData = {
         {
           name: '4 People (8 Skewers)',
           description: '',
-          price: '$90',
+          price: '$95',
           image: 'https://d1w7312wesee68.cloudfront.net/eSOGah08_yVUc39GZJabNUGNmWrnGBQgamdnp-TwJk8/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/3ff2b4ac-478b-426d-a6e0-67d74759b465.jpg',
         },
         {
@@ -265,7 +314,7 @@ export const menuData = {
         {
           name: '8 People (16 Skewers)',
           description: '',
-          price: '$160',
+          price: '$170',
           image: 'https://d1w7312wesee68.cloudfront.net/arqH2oEzWSNGcWpQbMC36TIY49Uv2fwwAaKSAk0g_n0/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/bb6cd060-0a2f-486e-b4e7-e4ad062f7ebf.jpg',
         },
       ]
@@ -277,73 +326,135 @@ export const menuData = {
         {
           name: 'Garlic Sauce',
           description: '',
-          price: '$0.75',
+          price: '$0.5',
           image: 'https://d1w7312wesee68.cloudfront.net/xt0UEp8wj0uR0QfM-wli8W5Wc7cOEd4dNKEBxA2FkxQ/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/5bfbbd94-cfd8-4d9b-acd8-2d93bb67c928.jpg',
         },
         {
           name: 'White Sauce',
           description: '',
-          price: '$0.75',
+          price: '$0.5',
           image: 'https://d1w7312wesee68.cloudfront.net/wT707P5zZwChePqTP1wEd7kK0B2hTn1oixBcgxXdtS4/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/c69c6c00-dc29-4e5a-a44a-befe0c4458aa.jpg',
         },
         {
           name: 'Hot Sauce',
           description: '',
-          price: '$0.75',
+          price: '$0.5',
           image: 'https://d1w7312wesee68.cloudfront.net/PCn1L09P2EbQXZHvUQIH8yoevlyS9hDjwvn12CI-h9E/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/a4f64a92-7a97-4ebd-a41a-aeecd86961a4.jpg',
         },
         {
           name: 'Abu Zayn Sauce',
           description: '',
-          price: '$0.75',
+          price: '$0.5',
           image: 'https://d1w7312wesee68.cloudfront.net/tvXTSoMiVZWSRty_L06Gw4B_59t-vLBuYykt-fSmPb4/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/bb750031-79fc-4389-aed5-a10ac9e77aaf.jpg',
         },
         {
           name: 'Tahini Sauce',
           description: '',
-          price: '$0.75',
+          price: '$0.5',
           image: 'https://d1w7312wesee68.cloudfront.net/N5rUaYm9TLVFpJaAGF0zyaQrp1iRZn-5TAeMeRrbgug/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/ac33c347-9510-4e63-88a8-3126d3681256/MenuItem/5412bedc-56c0-4f44-8b91-321f06f67e37.jpg',
         },
       ]
     },
     {
       id: 'beverages',
-      name: 'Beverages',
+      name: 'Soda',
       items: [
         {
-          name: 'Soda Can',
+          name: 'Soda can',
           description: '',
           price: '$2',
           image: '/abu-zayn.jpg',
         },
         {
-          name: 'Soda Bottle',
+          name: 'Soda bottle',
+          description: '',
+          price: '$3.5',
+          image: '/abu-zayn.jpg',
+        },
+        {
+          name: 'Water',
           description: '',
           price: '$3',
           image: '/abu-zayn.jpg',
+        },
+        {
+          name: 'Laziza',
+          description: 'Chilled Middle Eastern fruit drink, lightly sweet and refreshing.',
+          price: '$3.5',
+          image: '/abu-zayn.jpg',
+        },
+        {
+          name: 'Arabic Tea',
+          description: '',
+          price: '$4',
+          image: '/abu-zayn.jpg',
+
+        },
+        {
+          name: 'Arabic Coffee',
+          description: '',
+          price: '$6',
+          image: '/abu-zayn.jpg',
+
         },
       ]
     },
     {
       id: 'extras',
-      name: 'Extras',
+      name: 'Extra Add ons',
       items: [
         {
-          name: '2 Pieces Lamb Chops',
+          name: '2 pieces Lamb chops',
           description: '',
-          price: '$10',
+          price: '$14',
           image: '/abu-zayn.jpg',
         },
         {
-          name: 'Extra Skewer',
+          name: 'Extra Skewer Chicken',
           description: '',
           price: '$8',
           image: '/abu-zayn.jpg',
         },
         {
-          name: 'Extra Shawarma',
+          name: 'Extra shawarma',
           description: '',
-          price: '$5',
+          price: '$6',
+          image: '/abu-zayn.jpg',
+        },
+        {
+          name: 'Extra Skewer Lamb Kebab',
+          description: '',
+          price: '$12',
+          image: '/abu-zayn.jpg',
+        },
+        {
+          name: 'Extra Skewer Beef Kofta',
+          description: '',
+          price: '$9',
+          image: '/abu-zayn.jpg',
+        },
+      ]
+    },
+    {
+      id: 'soups',
+      name: 'Soups',
+      items: [
+        {
+          name: 'Red Lentil Soup',
+          description: 'Smooth red lentils with warm spices, topped with crunchy spicy Takis.',
+          price: '$7',
+          image: '/abu-zayn.jpg',
+        },
+        {
+          name: 'Harira Soup',
+          description: 'Tender beef cubes cooked with lentils, chickpeas, and tomato, finished with a blend of North African spices.',
+          price: '$9',
+          image: '/abu-zayn.jpg',
+        },
+        {
+          name: 'Chicken Orzo Soup',
+          description: 'Tender chicken, vegetables, and orzo simmered in a rich comforting broth.',
+          price: '$9',
           image: '/abu-zayn.jpg',
         },
       ]
