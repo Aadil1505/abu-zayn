@@ -23,17 +23,20 @@ export default function MenuPage() {
         </div>
         
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="w-full justify-center overflow-x-auto mb-8 h-auto flex-wrap sm:flex-nowrap gap-2 sm:gap-3 bg-muted/50 rounded-lg p-2">
-            {menuData.categories.map((category) => (
-              <TabsTrigger 
-                key={category.id}
-                value={category.id}
-                className="text-xs sm:text-sm font-light tracking-widest uppercase data-[state=active]:bg-background data-[state=active]:text-primary data-[state=inactive]:text-muted-foreground rounded-md transition-all px-4 py-2.5 hover:text-foreground hover:bg-background/50 whitespace-nowrap"
-              >
-                {category.name}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+          <div className="relative mb-8">
+            <TabsList className="w-full justify-start overflow-x-auto overflow-y-hidden mb-0 h-auto inline-flex gap-2 bg-transparent p-0 scrollbar-hide snap-x snap-mandatory scroll-smooth">
+              {menuData.categories.map((category) => (
+                <TabsTrigger
+                  key={category.id}
+                  value={category.id}
+                  // className="text-md inline-flex items-center justify-center font-blinds uppercase data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-muted/50 data-[state=inactive]:text-muted-foreground rounded-full transition-all px-4 py-2.5 hover:bg-muted hover:text-foreground whitespace-nowrap snap-start shrink-0 min-h-9"
+                  className="px-5 py-2 rounded-xl uppercase font-blinds text-xl snap-center transition-all"
+                >
+                  {category.name}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
 
           {menuData.categories.map((category) => (
             <TabsContent key={category.id} value={category.id} className="mt-0">

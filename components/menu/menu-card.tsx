@@ -38,7 +38,7 @@ export function MenuCard({ item }: MenuCardProps) {
       
       <div className="p-3 sm:p-4 flex flex-col flex-1">
         <div className="flex items-start justify-between gap-2 mb-2">
-          <h3 className="font-sans text-xs sm:text-sm font-light tracking-wide text-balance leading-tight uppercase">
+          <h3 className="font-sans text-xs sm:text-sm font-semibold tracking-wide text-balance leading-tight uppercase">
             {item.name}
           </h3>
           <span className="text-xs sm:text-sm font-light whitespace-nowrap text-primary">
@@ -47,7 +47,10 @@ export function MenuCard({ item }: MenuCardProps) {
         </div>
         
         {item.description && (
-          <p className="text-xs text-muted-foreground leading-relaxed mb-3 text-pretty">
+          // <p className="text-xs text-muted-foreground leading-relaxed mb-3 text-pretty">
+          //   {item.description}
+          // </p>
+          <p className="text-xs text-muted-foreground font-medium">
             {item.description}
           </p>
         )}
