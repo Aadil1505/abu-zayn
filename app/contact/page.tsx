@@ -12,7 +12,7 @@ export default function ContactPage() {
     { day: "Thursday", time: "12:00 PM - 10:00 PM" },
     { day: "Friday", time: "12:00 PM - 10:00 PM" },
     { day: "Saturday", time: "12:00 PM - 10:00 PM" },
-    { day: "Sunday", time: "Closed" },
+    { day: "Sunday", time: "12:00 PM - 9:00 PM" },
   ]
 
   return (
@@ -141,7 +141,7 @@ export default function ContactPage() {
                     key={item.day}
                     className="flex justify-between items-center py-2 border-b border-border/30 last:border-0"
                   >
-                    <span className={`font-medium ${item.day === "Sunday" ? "text-muted-foreground/70" : "text-foreground"}`}>
+                    <span className="font-medium text-foreground">
                       {item.day}
                     </span>
                     <span className={`text-sm ${item.time === "Closed" ? "text-muted-foreground/70" : "text-muted-foreground"}`}>
@@ -149,12 +149,6 @@ export default function ContactPage() {
                     </span>
                   </div>
                 ))}
-              </div>
-
-              <div className="mt-6 pt-6 border-t border-border/30 pl-[72px]">
-                <p className="text-sm text-muted-foreground/80 leading-relaxed">
-                  We're closed on Sundays to allow our team to rest and recharge. Visit us any other day of the week for authentic Egyptian cuisine!
-                </p>
               </div>
             </CardContent>
           </Card>

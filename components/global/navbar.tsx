@@ -120,7 +120,7 @@ export function Navbar() {
                     Open Daily • 12PM - 10PM
                   </p>
                   <p className="text-xs text-center text-muted-foreground">
-                    Closed Sundays
+                    Sundays 12PM - 9PM
                   </p>
                 </div>
               </div>

@@ -11,7 +11,7 @@ export const Location = () => {
     { day: "Thursday", time: "12:00 PM - 10:00 PM" },
     { day: "Friday", time: "12:00 PM - 10:00 PM" },
     { day: "Saturday", time: "12:00 PM - 10:00 PM" },
-    { day: "Sunday", time: "Closed" },
+    { day: "Sunday", time: "12:00 PM - 9:00 PM" },
   ];
 
   return (
@@ -84,10 +84,10 @@ export const Location = () => {
                             key={item.day}
                             className="flex justify-between text-sm"
                           >
-                            <span className={item.day === "Sunday" ? "text-muted-foreground/70" : "text-muted-foreground font-medium"}>
+                            <span className="text-muted-foreground font-medium">
                               {item.day}
                             </span>
-                            <span className={item.time === "Closed" ? "text-muted-foreground/70" : "text-muted-foreground"}>
+                            <span className="text-muted-foreground">
                               {item.time}
                             </span>
                           </div>
